@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import StyleGuide from 'pages/style-guide/style-guide'
 import PageNotFound from 'pages/404/404'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 
 const Home = () => import('@/pages/home/home')
+const About = () => import('@/pages/about/about')
 
 Vue.use(VueRouter)
 
@@ -21,7 +21,7 @@ const router = new VueRouter({
       path: '/about',
       name: 'About',
       navigation: true,
-      component: Home
+      component: About
     },
     {
       path: '/treatments',
@@ -40,12 +40,6 @@ const router = new VueRouter({
       name: 'Contact Us',
       navigation: true,
       component: Home
-    },
-    {
-      path: '/style-guide',
-      name: 'style guide',
-      navigation: false,
-      component: StyleGuide
     },
     {
       path: '/*',

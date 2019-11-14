@@ -1,2 +1,74 @@
-.footer
-  padding: rem-calc(50) 0
+.the-footer
+  padding-bottom: 3.75rem
+  display: flex
+
+  &__left-container
+    flex: 1 1 0
+
+    .the-footer__title
+      padding-right: 2.25rem
+      justify-content: flex-end
+      background-color: $blue
+
+    .the-footer__content
+      display: flex
+      justify-content: flex-end
+
+  &__logo-container
+    @extend .flex-column-center
+    flex: 2 1 0
+
+
+  &__logo
+    width: 240px
+    height: 145px
+    cursor: pointer
+
+  &__logo-text
+    margin-top: 1.5rem
+    font-size: 12px
+
+
+  &__right-container
+    flex: 1 1 0
+
+    .the-footer__title
+      padding-left: 2.25rem
+      justify-content: flex-start
+      background-color: $green
+
+    .the-footer__content
+      display: flex
+      justify-content: flex-start
+
+  &__title
+    display: flex
+    align-items: center
+    @extend h3
+    height: 55px
+    width: 100%
+    color: $white
+
+  &__icon
+    @extend .flex-column-center
+    height: 45px
+    width: 45px
+    border-radius: 100%
+    background-color: $green
+
+    &:nth-of-type(2)
+      background-color: $blue
+      margin-left: 1rem
+
+    svg
+      height: 30px
+      width: 30px
+
+  &__text
+    @extend h4
+
+  &__content
+    padding: 1rem 0
+
+  &__flex-column
+    @extend .flex-column

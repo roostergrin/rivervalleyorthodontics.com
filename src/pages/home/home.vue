@@ -4,6 +4,7 @@
 import HeroVideo from '@/components/block/block-hero-video/block-hero-video'
 import Welcome from '@/components/custom/custom-home-welcome/custom-home-welcome'
 import WhatSetsUsApart from '@/components/custom/custom-home-apart/custom-home-apart'
+import Testimonials from '@/components/custom/custom-home-testimonials/custom-home-testimonials'
 
 export default {
   computed: {
@@ -14,7 +15,8 @@ export default {
   components: {
     HeroVideo,
     Welcome,
-    WhatSetsUsApart
+    WhatSetsUsApart,
+    Testimonials
   }
 }
 </script>
