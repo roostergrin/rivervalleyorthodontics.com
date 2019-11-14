@@ -1,0 +1,30 @@
+.block-hero-photo
+  position: relative
+  height: 100vh
+  width: 100%
+
+  &__overlay
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(83, 83, 83, 0.25)
+
+  &__schedule-button
+    @extend button
+    position: absolute
+    display: none
+    background-color: $blue
+    bottom: 10%
+    left: 50%
+    transform: translate(-50%)
+    font-size: 18px
+    width: 60%
+
+    &:hover
+      background-color: $white
+      color: $blue
+
+    @include tablet
+      display: block

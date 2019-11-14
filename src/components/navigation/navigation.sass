@@ -1,4 +1,9 @@
 .navigation
-  &--desktop
-    @media screen and (max-width: 800px)
+
+  .nav-mobile
+    @media (min-width: $screen-laptop) and (max-width: $screen-desktop)
+      display: none
+
+  .nav-desktop
+    @media (min-width: 0) and (max-width: $screen-tablet-lg)
       display: none

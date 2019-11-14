@@ -1,3 +1,4 @@
 .pages-home(v-if='props')
-  h1 {{ props.title }}
-  h1 UPDATE
+  HeroVideo(:props="props.video_src")
+  Welcome(:props="props.welcome")
+  WhatSetsUsApart(:props="props.apart")

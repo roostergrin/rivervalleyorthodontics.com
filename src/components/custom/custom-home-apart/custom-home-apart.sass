@@ -1,0 +1,47 @@
+.custom-home-apart
+
+  &__container
+    @extend .container
+    margin-top: 2rem
+    margin-bottom: 2rem
+
+
+  &__text
+    @extend .col-12
+
+  &__text
+
+  &__tile-container
+    display: flex
+    height: 25rem
+
+    @include tablet
+      flex-direction: column
+
+  &__tile
+    position: relative
+    flex: 1 1 0
+
+    &:nth-of-type(2n)
+      .custom-home-apart__label-container
+        background-color: $opaqueGreen
+
+  &__img
+    height: 100%
+
+    @include tablet
+      height: 30rem
+
+  &__label-container
+    @extend .flex-column-center
+    position: absolute
+    color: $white
+    background-color: $opaqueBlue
+    bottom: 0
+    width: 100%
+    height: 5rem
+
+  &__label
+    @extend h4
+    color: $white
+    text-align: center

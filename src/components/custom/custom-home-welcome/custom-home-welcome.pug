@@ -1,0 +1,14 @@
+.custom-home-welcome
+  SectionTitle.custom-home-welcome__title(:title="props.title")
+  .custom-home-welcome__sub-title {{ props.sub_title}}
+  .custom-home-welcome__section
+    .custom-home-welcome__container
+      .custom-home-welcome__col-full.custom-home-welcome__flex
+        .custom-home-welcome__text(v-html="props.text")
+        .custom-home-welcome__img(:style="{'background': 'url(' + props.img_src + ') no-repeat center / cover '}")
+    .custom-home-welcome__background
+
+  .custom-home-welcome__container
+    .custom-home-welcome__col-full.custom-home-welcome__flex-center
+      .custom-home-welcome__schedule-text Schedule a consultation today to see how we can help you attain the smile you deserve.
+      .custom-home-welcome__button schedule your consultation

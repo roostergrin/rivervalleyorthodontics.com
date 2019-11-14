@@ -1,0 +1,12 @@
+.nav-desktop
+  .nav-desktop__top
+    BaseIcon.nav-desktop__logo(name="Header-Logo-Full")
+  .nav-desktop__bottom
+  .nav-desktop__container
+    .nav-desktop__row
+      .nav-desktop__phone-container
+        BaseIcon.nav-desktop__phone(name="Phone")
+        .nav-desktop__phone-number 208-678-3265
+      .nav-desktop__button Free Consultation
+    .nav-desktop__row
+      .nav-desktop__link(v-for="link in links", :to="link.path", v-html="link.name")

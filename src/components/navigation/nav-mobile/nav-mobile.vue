@@ -1,4 +1,4 @@
-<template lang="pug" src="./navigation-desktop.pug"></template>
+<template lang="pug" src="./nav-mobile.pug"></template>
 
 <script>
 export default {

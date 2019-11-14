@@ -1,6 +1,9 @@
 <template lang="pug" src="./home.pug"></template>
 
 <script>
+import HeroVideo from '@/components/block/block-hero-video/block-hero-video'
+import Welcome from '@/components/custom/custom-home-welcome/custom-home-welcome'
+import WhatSetsUsApart from '@/components/custom/custom-home-apart/custom-home-apart'
 
 export default {
   computed: {
@@ -9,6 +12,9 @@ export default {
     }
   },
   components: {
+    HeroVideo,
+    Welcome,
+    WhatSetsUsApart
   }
 }
 </script>

@@ -14,6 +14,30 @@ const router = new VueRouter({
     {
       path: '/',
       name: 'Home',
+      navigation: false,
+      component: Home
+    },
+    {
+      path: '/about',
+      name: 'About',
+      navigation: true,
+      component: Home
+    },
+    {
+      path: '/treatments',
+      name: 'Treatments',
+      navigation: true,
+      component: Home
+    },
+    {
+      path: '/for-patients',
+      name: 'For Patients',
+      navigation: true,
+      component: Home
+    },
+    {
+      path: '/contact-us',
+      name: 'Contact Us',
       navigation: true,
       component: Home
     },
