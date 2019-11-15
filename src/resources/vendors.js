@@ -2,24 +2,24 @@ import Vue from 'vue'
 import VeeValidate from 'vee-validate'
 import VueWaypoint from 'vue-waypoint'
 // import VueParallaxJs from 'vue-parallax-js'
-// import VueScrollTo from 'vue-scrollto'
+import VueScrollTo from 'vue-scrollto'
 // import VueAxe from 'vue-axe'
 
 const vendors = () => {
   Vue.use(VeeValidate)
   Vue.use(VueWaypoint)
   // Vue.use(VueParallaxJs, { minWidth: 1024 })
-  // Vue.use(VueScrollTo, {
-  //   container: 'body',
-  //   duration: 1500,
-  //   easing: 'ease',
-  //   offset: 0,
-  //   cancelable: true,
-  //   onDone: false,
-  //   onCancel: false,
-  //   x: false,
-  //   y: true
-  // })
+  Vue.use(VueScrollTo, {
+    container: 'body',
+    duration: 1500,
+    easing: 'ease',
+    offset: 0,
+    cancelable: true,
+    onDone: false,
+    onCancel: false,
+    x: false,
+    y: true
+  })
   // Vue.use(VueAxe, {
   //   config: {
   //     rules: [
