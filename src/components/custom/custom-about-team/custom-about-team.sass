@@ -1,0 +1,36 @@
+.custom-about-team
+  margin-top: 3.75rem
+  margin-bottom: 3.75rem
+
+  &:nth-of-type(n + 1)
+    .custom-about-team__title
+      margin-top: 3.75rem
+
+  &__large-container
+    @extend .container--large
+
+  &__col-full
+    @extend .col-12
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+  &__employee
+    position: relative
+    width: 288px
+    height: 384px
+    margin: 1rem .5rem
+
+    &:nth-of-type(2n)
+      .custom-about-team__name
+        background-color: $green
+
+  &__name
+    @extend h3
+    @extend .flex-row-center
+    position: absolute
+    width: 100%
+    color: $white
+    background-color: $blue
+    padding: 1.5rem 2rem
+    bottom: 0

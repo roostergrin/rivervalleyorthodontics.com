@@ -19,6 +19,11 @@ export default {
     phone () {
       return this.props.footer.phone
     }
+  },
+  methods: {
+    scrollToTop () {
+      this.$scrollTo('#nav')
+    }
   }
 }
 </script>

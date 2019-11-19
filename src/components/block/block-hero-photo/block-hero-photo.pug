@@ -1,2 +1,5 @@
 .block-hero-photo(:style="{ 'background' : 'url(' + img + ') no-repeat center / cover'}")
   //- .custom-block-hero-photo__overlay
+  .block-hero-photo__container
+    .block-hero-photo__col-full
+      .block-hero-photo__title(v-if="title") {{ title }}

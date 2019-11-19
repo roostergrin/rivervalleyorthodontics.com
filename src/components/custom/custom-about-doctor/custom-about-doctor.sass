@@ -1,0 +1,48 @@
+.custom-about-doctor
+
+  &__title
+    margin-top: 3.75rem
+    margin-bottom: 3.75rem
+
+  &__container
+    @extend .container
+
+  &__col-full
+    @extend .col-12
+    display: flex
+
+  &__title-container
+
+  &__section-title
+    @extend h2
+
+  &__icon
+    margin-top: -10px
+    display: none
+
+  &__title-container
+    margin: 0 .5rem
+    cursor: pointer
+
+    &:first-of-type
+      margin-left: 0
+
+    &:last-of-type
+      margin-right: 0
+
+    &--active
+      color: $green
+
+      .custom-about-doctor__icon
+        display: block
+
+
+  &__photo
+    height: 60rem
+
+  &__section-content
+    position: absolute
+    background-color: $green
+    color: $white
+    padding: 1.25rem 2.5rem
+    max-width: 500px

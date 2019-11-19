@@ -10,7 +10,7 @@ footer.the-footer(v-if="props")
       .the-footer__content
         .the-footer__text {{ phone }}
   .the-footer__logo-container
-    BaseIcon.the-footer__logo(name="Header-Logo-Full")
+    BaseIcon.the-footer__logo(name="Header-Logo-Full" @click.native="scrollToTop")
     .the-footer__logo-text Click logo to return to the top
 
   .the-footer__right-container
@@ -21,4 +21,3 @@ footer.the-footer(v-if="props")
     .the-footer__section
       .the-footer__title Hours
       .the-footer__content.the-footer__flex-column(v-html="hours")
-  //- pre {{ props }}

@@ -28,3 +28,17 @@
 
     @include tablet
       display: block
+
+  &__container
+    @extend .container
+    height: 100%
+    align-items: flex-end
+    bottom: 3rem
+
+  &__col-full
+    @extend .col-12
+
+  &__title
+    @extend h1
+    bottom: 3rem
+    color: $white

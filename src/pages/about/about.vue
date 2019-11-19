@@ -2,6 +2,8 @@
 
 <script>
 import HeroImg from '@/components/block/block-hero-photo/block-hero-photo'
+import AboutDoctor from '@/components/custom/custom-about-doctor/custom-about-doctor'
+import AboutTeams from '@/components/custom/custom-about-team/custom-about-team'
 
 export default {
   computed: {
@@ -10,7 +12,9 @@ export default {
     }
   },
   components: {
-    HeroImg
+    HeroImg,
+    AboutDoctor,
+    AboutTeams
   }
 }
 </script>

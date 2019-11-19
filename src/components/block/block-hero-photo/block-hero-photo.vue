@@ -3,7 +3,12 @@
 <script>
 export default {
   props: {
-    img: String
+    img: {
+      type: String
+    },
+    title: {
+      type: String
+    }
   }
 }
 </script>
