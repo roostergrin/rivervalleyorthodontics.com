@@ -1,0 +1,9 @@
+.custom-treatments-technology
+  SectionTitle.custom-treatments-technology__title(:title="props.title", :size="'double'")
+  .custom-treatments-technology__col-full(:style="{'background' : 'url(' + technologies[0].img + ') no-repeat center / cover'}")
+    .custom-treatments-technology__text {{ technologies[0].text }}
+  .custom-treatments-technology__col-wrapper
+    .custom-treatments-technology__col-half(:style="{'background' : 'url(' + technologies[1].img + ') no-repeat center / cover'}")
+      .custom-treatments-technology__text-left {{ technologies[1].text }}
+    .custom-treatments-technology__col-half(:style="{'background' : 'url(' + technologies[2].img + ') no-repeat center / cover'}")
+      .custom-treatments-technology__text-right {{ technologies[2].text }}

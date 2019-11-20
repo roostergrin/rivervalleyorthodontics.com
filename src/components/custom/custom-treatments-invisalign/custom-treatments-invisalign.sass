@@ -1,0 +1,38 @@
+.custom-treatments-invisalign
+  position: relative
+  height: 30rem
+  margin-bottom: 3.75rem
+
+  @include tablet
+    height:  auto
+
+  .block-title__container
+    padding: 0
+
+  &__container
+    @extend .container
+    display: flex
+
+  &__col
+    @extend .col-6
+
+  &__col-img
+    width: 100%
+
+    @include tablet
+      height: 300px
+
+  &__content
+    @include tablet
+      margin-top: 1rem
+      margin-bottom: 1rem
+
+  &__img
+    position: absolute
+    width: 50%
+    height: 100%
+    right: 0
+    top: 0
+
+    @include tablet
+      display: none

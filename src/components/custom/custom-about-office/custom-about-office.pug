@@ -1,0 +1,9 @@
+.custom-about-office
+  SectionTitle.custom-about-office__title(:title="props.title")
+  .custom-about-office__flex-container
+    .custom-about-office__half-container(:style="{'background' : 'url(' + officeFeatures[0].img + ') no-repeat center / cover'}")
+      .custom-about-office__text {{ officeFeatures[0].text }}
+    .custom-about-office__half-container(:style="{'background' : 'url(' + officeFeatures[1].img + ') no-repeat center / cover'}")
+      .custom-about-office__text {{ officeFeatures[1].text }}
+  .custom-about-office__full-container(:style="{'background' : 'url(' + officeFeatures[2].img + ') no-repeat center / cover'}")
+      .custom-about-office__text.custom-about-office__text--blue {{ officeFeatures[2].text }}

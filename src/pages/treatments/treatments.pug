@@ -1,0 +1,7 @@
+.pages-treatments(v-if="props")
+  HeroImg(:img="props.img", :title="props.title")
+  TreatmentsTechnology(:props="props.technology")
+  TreatmentsInvisalign(:props="props.invisalign")
+  TreatmentsSection(:props="props.braces")
+  TreatmentsSection(:props="props.smiles")
+  TreatmentsRetainers(:props="props.retainers")

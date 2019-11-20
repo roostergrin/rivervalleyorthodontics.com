@@ -1,0 +1,68 @@
+.custom-about-office
+  margin-bottom: 3.75rem
+
+  &__title
+    text-align: center
+    margin-bottom: 1rem
+
+  &__flex-container
+    display: flex
+    height: 35rem
+    margin-bottom: 1rem
+
+    @include tablet-lg
+      flex-direction: column
+      margin-bottom: 0
+      height: auto
+
+  &__half-container
+    position: relative
+    width: 50%
+    height: 100%
+
+    @include tablet-lg
+      width: 100%
+      height: 35rem
+
+    &:nth-of-type(2)
+
+      .custom-about-office__text
+        right: 0
+        left: auto
+
+        @include tablet-lg
+          text-align: center
+          right: auto
+          width: 100%
+
+  &__full-container
+    position: relative
+    width: 100%
+    height: 35rem
+
+  &__text
+    position: absolute
+    bottom: 0
+    left: 0
+    color: $white
+    background-color: $green
+    padding: 2rem 1.5rem
+    max-width: 535px
+
+    @include tablet-lg
+      left: auto
+      right: auto
+      max-width: 100%
+      width: 100%
+      text-align: center
+
+    &--blue
+      background-color: $blue
+      left: auto
+      right: 10%
+
+      @include tablet-lg
+        left: auto
+        right: auto
+        max-width: 100% !important
+        text-align: center

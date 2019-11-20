@@ -1,0 +1,68 @@
+.custom-treatments-technology
+  margin-top: 3.75rem
+  margin-bottom: 3.75rem
+
+  &__title
+    margin-bottom: 1rem
+
+  &__col-full
+    position:  relative
+    height: 35rem
+    width: 100%
+    margin-bottom: 1rem
+
+    @include tablet
+      margin-bottom: 0
+
+  &__col-wrapper
+    display: flex
+
+    @include tablet
+      flex-direction: column
+
+  &__col-half
+    position: relative
+    width: 50%
+    height: 35rem
+
+    @include tablet
+      width: 100%
+
+  &__text
+    position: absolute
+    bottom: 0
+    right: 5%
+    color: $white
+    background-color: rgba(38, 171, 227, 0.85)
+    max-width: 535px
+    padding: 2rem 1.5rem
+
+    @include tablet
+      right: 0
+      max-width: 100%
+
+  &__text-left
+    position: absolute
+    bottom: 0
+    left: 0
+    color: $white
+    background-color: rgba(148, 199, 51, 0.85)
+    padding: 2rem 1.5rem
+    max-width: 535px
+
+    @include tablet
+      width: 100%
+      max-width: 100%
+
+  &__text-right
+    position: absolute
+    bottom: 0
+    right: 0
+    color: $white
+    background-color: rgba(148, 199, 51, 0.85)
+    padding: 2rem 1.5rem
+    max-width: 535px
+
+    @include tablet
+      width: 100%
+      max-width: 100%

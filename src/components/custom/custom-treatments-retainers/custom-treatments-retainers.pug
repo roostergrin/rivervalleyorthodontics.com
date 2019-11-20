@@ -1,0 +1,11 @@
+.custom-treatments-retainers
+  .custom-treatments-retainers__container
+    .custom-treatments-retainers__col-full
+      SectionTitle.custom-treatments-retainers__title(:title="props.title")
+  .custom-treatments-retainers__full-container
+    .custom-treatments-retainers__photo(:style="{'background' : 'url(' + props.img + ') no-repeat center / cover'}")
+    .custom-treatments-retainers__container
+      .custom-treatments-retainers__col
+        .custom-treatments-retainers__img(:style="{'background' : 'url(' + props.img + ') no-repeat center / cover'}")
+      .custom-treatments-retainers__col
+        .custom-treatments-retainers__content(v-html="props.content")

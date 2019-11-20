@@ -5,6 +5,7 @@ import scrollBehavior from '@/shared/functionality/scroll-behavior'
 
 const Home = () => import('@/pages/home/home')
 const About = () => import('@/pages/about/about')
+const Treatments = () => import('@/pages/treatments/treatments')
 
 Vue.use(VueRouter)
 
@@ -27,7 +28,7 @@ const router = new VueRouter({
       path: '/treatments',
       name: 'Treatments',
       navigation: true,
-      component: Home
+      component: Treatments
     },
     {
       path: '/for-patients',

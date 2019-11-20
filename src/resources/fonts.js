@@ -9,7 +9,7 @@ var WebFont = require('webfontloader')
 const fonts = () => {
   WebFont.load({
     google: {
-      families: [ 'Open+Sans:400,600' ]
+      families: [ 'Open+Sans:400,600', 'Nunito:300,400,600', 'Libre+Baskerville:300,400,600' ]
     }
   })
 }

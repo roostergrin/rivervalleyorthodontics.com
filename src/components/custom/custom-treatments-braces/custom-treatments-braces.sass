@@ -1,0 +1,56 @@
+.custom-treatments-braces
+  margin-bottom: 3.75rem
+
+  &__title
+    margin-bottom:
+
+  &__container
+    @extend .container
+    margin-bottom: 1rem
+
+  &__col
+    @extend .col-12
+    display: flex
+
+  &__col-fourth
+    @extend .col-3
+
+  &__section-container
+    display: flex
+    flex-direction: column
+    cursor: pointer
+    margin: 0 1rem
+
+    &:first-of-type
+      margin-left: 0
+
+    &:last-of-type
+      margin-right: 0
+
+    &--active
+      color: $green
+
+      .custom-treatments-braces__icon
+        display: block
+
+  &__section
+    @extend h2
+
+  &__icon
+    width: 100%
+    margin-top: -5px
+    display: none
+
+  &__background
+    height: 50rem
+    width: 100%
+
+  &__content
+    position: absolute
+    background-color: $green
+    color: $white
+    padding: 1.5rem 2rem
+    max-width: 400px
+
+  &__text-container
+    height: 20rem

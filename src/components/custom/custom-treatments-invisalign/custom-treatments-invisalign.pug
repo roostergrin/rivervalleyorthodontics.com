@@ -1,0 +1,8 @@
+.custom-treatments-invisalign
+  .custom-treatments-invisalign__container
+    .custom-treatments-invisalign__col
+      SectionTitle.custom-treatments-invisalign__title(:title="props.title", :color="'blue'")
+      .custom-treatments-invisalign__content(v-html="props.content")
+    .custom-treatments-invisalign__col
+      .custom-treatments-invisalign__col-img(:style="{'background': 'url(' + props.img +') no-repeat center / cover'}")
+  .custom-treatments-invisalign__img(:style="{'background': 'url(' + props.img +') no-repeat center / cover'}")

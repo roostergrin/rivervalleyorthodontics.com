@@ -1,5 +1,5 @@
 .custom-about-doctor
-  SectionTitle.custom-about-doctor__title(:title="props.title")
+  SectionTitle.custom-about-doctor__title(:title="props.title", :color="'green'", :size="'double'")
   .custom-about-doctor__container
     .custom-about-doctor__col-full
       .custom-about-doctor__title-container(v-for="(section, i) in props.sections", :class="{'custom-about-doctor__title-container--active' : activeIndex === i}", @click="updateActiveSection(i)")

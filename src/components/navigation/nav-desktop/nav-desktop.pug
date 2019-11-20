@@ -9,4 +9,4 @@
         .nav-desktop__phone-number 208-678-3265
       .nav-desktop__button Free Consultation
     .nav-desktop__row
-      .nav-desktop__link(v-for="link in links", :to="link.path", v-html="link.name")
+      router-link.nav-desktop__link(v-for="(link, i) in links", :key="i", :to="link.path", v-html="link.name")
