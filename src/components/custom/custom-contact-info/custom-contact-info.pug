@@ -1,0 +1,14 @@
+.custom-contact-info
+  .custom-contact-info__container
+    .custom-contact-info__col
+      .custom-contact-info__info-container
+        SectionTitle(:title="'Address'", :color="'blue'")
+        .custom-contact-info__information(v-html="props.address")
+      .custom-contact-info__info-container
+        SectionTitle(:title="'Phone'", :color="'blue'")
+        .custom-contact-info__information(v-html="props.phone")
+      .custom-contact-info__info-container
+        SectionTitle(:title="'Hours'", :color="'blue'")
+        .custom-contact-info__information(v-html="props.hours")
+    .custom-contact-info__col
+  .custom-contact-info__background

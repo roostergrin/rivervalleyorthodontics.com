@@ -1,0 +1,7 @@
+.custom-patients-payment
+  .custom-patients-payment__container
+    .custom-patients-payment__title-col
+      SectionTitle.custom-patients-payment__section-title(:title="props.title")
+      .custom-patients-payment__sub-title {{ props.sub_title }}
+      .custom-patients-payment__button-container
+        BaseIcon.custom-patients-payment__button(name="GetStarted_PatientForms_OrthoFi" @click.native="redirect(props.payment_link)")

@@ -1,0 +1,44 @@
+.custom-contact-info
+  position: relative
+  margin-top: 3.75rem
+  margin-bottom: 3.75rem
+
+  &__container
+    @extend .container
+    position: relative
+
+  &__col
+    @extend .col-6
+    @extend .col-12--tablet
+
+  &__info-container
+    @extend .flex-column-center
+    margin: 2.5rem 0
+
+    &:first-of-type
+      margin-top: 0
+
+    &:last-of-type
+      margin-bottom: 0
+
+      .custom-contact-info__information
+        text-align: center
+
+
+    svg
+      max-width: 200px
+
+  &__information
+    @extend h4
+
+
+  &__background
+    position: absolute
+    background-color: $blue
+    width: 50%
+    height: 75%
+    margin: auto
+    z-index: -1
+    top: 0
+    right: 0
+    transform: translate(0, 15%)

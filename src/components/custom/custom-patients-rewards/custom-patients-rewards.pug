@@ -1,0 +1,8 @@
+.custom-patients-rewards
+  .custom-patients-rewards__container
+    .custom-patients-rewards__col-full
+      SectionTitle.custom-patients-rewards__title(:title="props.title", :color="'blue'")
+  .custom-patients-rewards__background(:style="{'background': 'url(' + props.img + ') no-repeat center / cover'}")
+    .custom-patients-rewards__container
+      .custom-patients-rewards__col-full
+        .custom-patients-rewards__text {{ props.text }}

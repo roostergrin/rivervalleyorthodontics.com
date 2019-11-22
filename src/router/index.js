@@ -6,6 +6,8 @@ import scrollBehavior from '@/shared/functionality/scroll-behavior'
 const Home = () => import('@/pages/home/home')
 const About = () => import('@/pages/about/about')
 const Treatments = () => import('@/pages/treatments/treatments')
+const Patients = () => import('@/pages/patients/patients')
+const Contact = () => import('@/pages/contact/contact')
 
 Vue.use(VueRouter)
 
@@ -34,13 +36,13 @@ const router = new VueRouter({
       path: '/for-patients',
       name: 'For Patients',
       navigation: true,
-      component: Home
+      component: Patients
     },
     {
       path: '/contact-us',
       name: 'Contact Us',
       navigation: true,
-      component: Home
+      component: Contact
     },
     {
       path: '/*',
