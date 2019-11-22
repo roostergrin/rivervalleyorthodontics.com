@@ -2,6 +2,7 @@
 
 <script>
 import SectionTitle from '@/components/block/block-title/block-title'
+import ContactForm from '@/components/form/form-contact/form-contact'
 
 export default {
   props: {
@@ -10,7 +11,8 @@ export default {
     }
   },
   components: {
-    SectionTitle
+    SectionTitle,
+    ContactForm
   }
 }
 </script>
