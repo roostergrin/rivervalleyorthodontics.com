@@ -1,1 +1,107 @@
 .nav-mobile
+  position: fixed
+  top: 0
+  width: 100%
+  background-color: $white
+  z-index: 1000
+
+  &__top-container
+    display: flex
+    align-items: center
+    padding: 5px 10px
+
+  &__image
+    height: 50px
+    width: 150px
+
+  &__icon
+    height: 48px
+    width: 88px
+
+  &__menu-icon
+    position: absolute
+    display: inline-block
+    right: 10px
+    top: 14px
+    color: $white
+
+    &:hover
+      cursor: pointer
+
+  &__phone-icon
+    position: absolute
+    right: 90px
+    top: 10px
+    display: inline-block
+    fill: $green
+    width: 35px
+
+    &:hover
+      cursor: pointer
+
+  &__menu
+    width: 100%
+    height: 0
+    position: absolute
+    overflow: hidden
+    background-color: $white
+    transition: height .2s ease
+
+  &__menu-wrapper
+    overflow: scroll
+    height: 100%
+    padding-bottom: 2rem
+
+  &__links-container
+    @extend .flex-column
+    padding: 2rem 3rem
+    text-align: left
+    background-color: $white
+
+    span
+      padding: 15px 0
+
+      a
+        @extend h3
+        color: $blue
+        text-transform: uppercase
+        text-decoration: none
+        text-align: left
+        cursor: pointer
+
+  &__info-container
+    @extend .flex-column-center
+    padding: 0 3rem 2rem 3rem
+
+  &__button
+    @extend button
+    font-size: 20px
+    max-width: 265px
+    margin-bottom: 1.5rem
+
+    &--complimentary
+      background-color: $blue
+      max-width: 305px
+
+    &--rewards
+      background-color: $blue
+      padding: 10px 40px
+
+  &__phone
+    text-decoration: none
+    font-size: 26px
+    font-weight: 300
+    letter-spacing: -0.33px
+    color: $blue
+
+  &__hours
+    color: $blue
+
+  // drawer open
+  &--open
+
+    .nav-mobile__menu
+      width: 100%
+      height: 100vh
+
+    &__links-container

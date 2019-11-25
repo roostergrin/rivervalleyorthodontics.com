@@ -5,7 +5,9 @@ import {
   // GET_BLOG,
   // SET_BLOG,
   GET_PAGES,
-  SET_SCROLLED
+  SET_SCROLLED,
+  SET_NAV_STATE,
+  VIEW_NAV_DRAWER
 } from './mutation-types'
 
 const actions = {
@@ -68,6 +70,12 @@ const actions = {
   },
   SET_SCROLLED ({ commit }, data) {
     commit(SET_SCROLLED, data)
+  },
+  SET_NAV_STATE ({ commit }, data) {
+    commit(SET_NAV_STATE, data)
+  },
+  VIEW_NAV_DRAWER ({commit}, data) {
+    commit(VIEW_NAV_DRAWER, data)
   }
 }
 

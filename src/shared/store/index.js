@@ -10,6 +10,8 @@ const store = new Vuex.Store({
     app: {},
     // blog: {},
     // sortedBlog: {},
+    navState: '',
+    navDrawer: false,
     loading: true,
     pages: {},
     scrolled: {}

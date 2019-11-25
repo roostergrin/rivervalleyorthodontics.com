@@ -5,12 +5,14 @@ export default {
   props: {
     links: {
       type: Array
+    }
+  },
+  computed: {
+    navState () {
+      return this.$store.state.navState
     },
-    props: {
-      type: Object
-    },
-    scrolling: {
-      type: Boolean
+    activeRoute () {
+      return this.$router.history.current.name
     }
   },
   methods: {
