@@ -12,6 +12,11 @@ export default {
     scrolling: {
       type: Boolean
     }
+  },
+  methods: {
+    redirectHome () {
+      this.$router.push('/')
+    }
   }
 }
 </script>

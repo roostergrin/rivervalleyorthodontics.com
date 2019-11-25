@@ -3,5 +3,8 @@
     SectionTitle.custom-about-team__title(:title="team.title")
     .custom-about-team__large-container
       .custom-about-team__col-full
-        .custom-about-team__employee(v-for="(employee, index) in team.staff", :style="{ 'background' : 'url(' + employee.img + ') no-repeat center / cover'}")
-          .custom-about-team__name {{ employee.name }}
+        EmployeeTile(v-for="(employee, index) in team.staff", :key="index", :props="employee")
+        //- .custom-about-team__employee(v-for="(employee, index) in team.staff", :style="{ 'background' : 'url(' + employee.img + ') no-repeat center / cover'}")
+        //-   .custom-about-team__employee-info 
+        //-     .custom-about-team__name {{ employee.name }}
+        //-     .custom-about-team__bio {{ employee.bio }}

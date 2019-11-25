@@ -2,6 +2,7 @@
 
 <script>
 import SectionTitle from '@/components/block/block-title/block-title'
+import EmployeeTile from '@/components/block/block-employee-tile/block-employee-tile'
 
 export default {
   props: {
@@ -10,7 +11,8 @@ export default {
     }
   },
   components: {
-    SectionTitle
+    SectionTitle,
+    EmployeeTile
   }
 }
 </script>

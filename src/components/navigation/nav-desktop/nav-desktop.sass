@@ -10,6 +10,7 @@
   &__logo
     position: absolute
     transform: translate(50%, 10px)
+    cursor: pointer
 
     svg
       width: 125px
@@ -61,6 +62,12 @@
     color: $white
     padding: 10px 15px
     cursor: pointer
+    border: 1px solid $green 
+
+    &.router-link-active
+      background-color: $white 
+      border: 1px solid $green
+      color: $green
 
     &:hover
       filter: brightness(1.05)
