@@ -12,12 +12,15 @@ export default {
       return this.$store.state.navState
     },
     activeRoute () {
-      return this.$router.history.current.name
+      return this.$route.name
     }
   },
   methods: {
     redirectHome () {
       this.$router.push('/')
+    },
+    showRoute () {
+      console.log(this.$router.history.current.name)
     }
   }
 }
