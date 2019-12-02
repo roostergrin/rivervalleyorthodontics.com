@@ -1,96 +1,12 @@
 .the-footer
-  padding-bottom: 3.75rem
-  display: flex
+  width: 100%
 
-  &__left-container
-    flex: 1 1 0
+  &__desktop
+    @media (min-width: 0) and (max-width: $screen-tablet-lg)
+      display: none
 
-    .the-footer__title
-      padding-right: 2.25rem
-      justify-content: flex-end
-      background-color: $blue
-
-    .the-footer__content
-      display: flex
-      justify-content: flex-end
-
-  &__logo-container
-    @extend .flex-column-center
-    flex: 2 1 0
+  &__mobile
+    @media (min-width: $screen-laptop) and (max-width: $screen-desktop)
+      display: none
 
 
-  &__logo
-    width: 240px
-    height: 145px
-    cursor: pointer
-    transition: transform .3s ease
-
-    &:hover
-      transform: translate(0,-3px)
-
-  &__logo-text
-    margin-top: 1.5rem
-    font-size: 12px
-
-
-  &__right-container
-    flex: 1 1 0
-
-    .the-footer__title
-      padding-left: 2.25rem
-      justify-content: flex-start
-      background-color: $green
-
-    .the-footer__content
-      display: flex
-      justify-content: flex-start
-
-  &__title
-    display: flex
-    align-items: center
-    @extend h3
-    height: 55px
-    width: 100%
-    color: $white
-
-  &__icon
-    @extend .flex-column-center
-    height: 45px
-    width: 45px
-    border-radius: 100%
-    background-color: $green
-    border: 1px solid transparent
-    cursor: pointer
-
-    &:nth-of-type(2)
-      background-color: $blue
-      margin-left: 1rem
-
-      &:hover
-        border: 1px solid $blue
-
-        svg
-          fill: $blue
-
-    svg
-      fill: $white
-      height: 30px
-      width: 30px
-
-    &:hover
-      background-color: $white
-      border: 1px solid $green
-      fill: $green
-
-      svg
-        fill: $green
-
-
-  &__text
-    @extend h4
-
-  &__content
-    padding: 1rem 0
-
-  &__flex-column
-    @extend .flex-column

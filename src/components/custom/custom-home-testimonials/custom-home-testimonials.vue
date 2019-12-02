@@ -9,8 +9,14 @@ export default {
       type: Object
     }
   },
+  created () {
+    setInterval(() => {
+      this.incrementIndex()
+    }, this.interval)
+  },
   data: () => ({
-    currentIndex: 0
+    currentIndex: 0,
+    interval: 8000
   }),
   computed: {
     testimonials () {
@@ -23,6 +29,20 @@ export default {
   methods: {
     jumpToIndex (index) {
       this.currentIndex = index
+    },
+    incrementIndex () {
+      if (this.currentIndex === this.testimonials.length - 1) {
+        this.currentIndex = 0
+      } else {
+        this.currentIndex++
+      }
+    },
+    decrementIndex () {
+      if (this.currentIndex === 0) {
+        this.currentIndex = this.testimonials.length - 1
+      } else {
+        this.currentIndex--
+      }
     }
   },
   components: {

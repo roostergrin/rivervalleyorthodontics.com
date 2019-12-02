@@ -3,7 +3,7 @@
   top: 0
   width: 100%
   background-color: $white
-  z-index: 1000
+  z-index: 9
 
   &__top-container
     display: flex
@@ -68,6 +68,9 @@
         text-decoration: none
         text-align: left
         cursor: pointer
+
+        &.router-link-active
+          font-weight: bold
 
   &__info-container
     @extend .flex-column-center

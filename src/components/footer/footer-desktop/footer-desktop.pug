@@ -1,0 +1,24 @@
+.the-footer-desktop
+  .the-footer-desktop__left-container
+    .the-footer-desktop__section
+      .the-footer-desktop__title Address
+      .the-footer-desktop__content
+        .the-footer-desktop__text(v-html="address")
+    .the-footer-desktop__section
+      .the-footer-desktop__title Phone
+      .the-footer-desktop__content
+        .the-footer-desktop__text {{ phone }}
+
+  .the-footer-desktop__logo-container
+    BaseIcon.the-footer-desktop__logo(name="Header-Logo-Full" @click.native="scrollToTop")
+    .the-footer-desktop__logo-text Click logo to return to the top
+
+  .the-footer-desktop__right-container
+    .the-footer-desktop__section
+      .the-footer-desktop__title Follow Us
+      .the-footer-desktop__content
+        BaseIcon.the-footer-desktop__icon(:name="social.icon_name", v-for="(social, i) in socials", :key="i")
+    .the-footer-desktop__section
+      .the-footer-desktop__title Hours
+      .the-footer-desktop__content.the-footer-desktop__flex-column(v-html="hours")
+

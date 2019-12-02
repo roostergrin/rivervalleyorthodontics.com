@@ -1,0 +1,23 @@
+.the-footer-mobile
+  .the-footer-mobile__title-background
+    .the-footer-mobile__container
+      .the-footer-mobile__col
+        .the-footer-mobile__title Office Info
+
+  .the-footer-mobile__container
+    .the-footer-mobile__col
+      .the-footer-mobile__address(v-html="address")
+      .the-footer-mobile__phone {{ phone }}
+
+  .the-footer-mobile__title-background
+    .the-footer-mobile__container
+      .the-footer-mobile__col
+        .the-footer-mobile__title Hours
+
+  .the-footer-mobile__hours(v-html="hours")
+  .the-footer-mobile__socials
+    BaseIcon.the-footer-mobile__icon(:name="social.icon_name", v-for="(social, i) in socials", :key="i")
+
+  .the-footer-mobile__logo-container
+    BaseIcon.the-footer-mobile__logo(name="Header-Logo-Full" @click.native="scrollToTop")
+    .the-footer-mobile__logo-text Click logo to return to the top

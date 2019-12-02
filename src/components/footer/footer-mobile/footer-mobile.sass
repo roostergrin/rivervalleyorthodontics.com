@@ -1,0 +1,81 @@
+.the-footer-mobile
+  padding-bottom: 3.75rem
+
+  &__container
+    @extend .container
+
+  &__background
+
+  &__col
+    @extend .col-12
+    @extend .flex-column-center
+
+  &__title-background
+    background-color: $blue
+
+    &:nth-of-type(2n)
+      background-color: $green
+
+  &__title
+    display: flex
+    align-items: center
+    @extend h3
+    height: 55px
+    width: 100%
+    color: $white
+
+  &__address
+    @extend h4
+    padding-top: 1rem
+
+  &__phone
+    @extend h4
+    padding-bottom: 1rem
+
+  &__socials
+    @extend .flex-row-center
+    padding: 1rem 0
+
+  &__hours
+    padding: 1rem
+
+  &__logo
+
+    svg
+      width: 120px
+      height: 80px
+
+  &__logo-container
+    @extend .flex-column-center
+
+  &__icon
+    @extend .flex-column-center
+    height: 45px
+    width: 45px
+    border-radius: 100%
+    background-color: $green
+    border: 1px solid transparent
+    cursor: pointer
+
+    &:nth-of-type(2)
+      background-color: $blue
+      margin-left: 1rem
+
+      &:hover
+        border: 1px solid $blue
+
+        svg
+          fill: $blue
+
+    svg
+      fill: $white
+      height: 30px
+      width: 30px
+
+    &:hover
+      background-color: $white
+      border: 1px solid $green
+      fill: $green
+
+      svg
+        fill: $green

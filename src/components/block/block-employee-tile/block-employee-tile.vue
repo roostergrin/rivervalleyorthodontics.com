@@ -12,7 +12,6 @@ export default {
   }),
   methods: {
     toggleState () {
-      console.log('cats')
       this.active = !this.active
     }
   }

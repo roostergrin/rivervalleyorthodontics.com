@@ -17,12 +17,21 @@ export default {
   methods: {
     toggleDrawer () {
       this.$store.dispatch('VIEW_NAV_DRAWER', !this.drawerState)
+    },
+    redirectHome () {
+      this.$router.push('/')
+      this.$store.dispatch('VIEW_NAV_DRAWER', false)
     }
   },
   watch: {
     '$store.state.navDrawer' (state) {
       const body = document.querySelector('body')
       state ? body.style.overflow = 'hidden' : body.style.overflow = 'auto'
+    },
+    '$route' (to, from) {
+      if (to.name !== 'Home') {
+        this.$store.dispatch('VIEW_NAV_DRAWER', false)
+      }
     }
   },
   components: {
