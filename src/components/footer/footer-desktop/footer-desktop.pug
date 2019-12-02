@@ -17,8 +17,7 @@
     .the-footer-desktop__section
       .the-footer-desktop__title Follow Us
       .the-footer-desktop__content
-        BaseIcon.the-footer-desktop__icon(:name="social.icon_name", v-for="(social, i) in socials", :key="i")
+        BaseIcon.the-footer-desktop__icon(:name="social.icon_name", v-for="(social, i) in socials", @click.native="redirect(social.link)", :key="i")
     .the-footer-desktop__section
       .the-footer-desktop__title Hours
       .the-footer-desktop__content.the-footer-desktop__flex-column(v-html="hours")
-

@@ -16,7 +16,7 @@
 
   .the-footer-mobile__hours(v-html="hours")
   .the-footer-mobile__socials
-    BaseIcon.the-footer-mobile__icon(:name="social.icon_name", v-for="(social, i) in socials", :key="i")
+    BaseIcon.the-footer-mobile__icon(:name="social.icon_name", v-for="(social, i) in socials", @click.native="redirect(social.link)", :key="i")
 
   .the-footer-mobile__logo-container
     BaseIcon.the-footer-mobile__logo(name="Header-Logo-Full" @click.native="scrollToTop")

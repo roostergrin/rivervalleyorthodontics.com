@@ -23,6 +23,10 @@ export default {
   methods: {
     scrollToTop () {
       this.$scrollTo('#nav')
+    },
+    redirect (url) {
+      const win = window.open(url, '_blank')
+      win.focus()
     }
   }
 }

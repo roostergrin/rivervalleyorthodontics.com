@@ -4,4 +4,4 @@
       SectionTitle.custom-patients-forms__section-title(:title="props.title")
       .custom-patients-forms__sub-title {{ props.sub_title }}
       .custom-patients-forms__button-container
-        .custom-patients-forms__button(v-for="button in props.patient_forms") {{ button.text }}
+        a.custom-patients-forms__button(v-for="button in props.patient_forms", :href="button.link") {{ button.text }}
