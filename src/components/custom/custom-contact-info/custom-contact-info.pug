@@ -10,5 +10,5 @@
       .custom-contact-info__info-container
         SectionTitle(:title="'Hours'", :color="'blue'")
         .custom-contact-info__information(v-html="props.hours")
-    .custom-contact-info__col
+    a.custom-contact-info__col(:style="{'background' : 'url(' + props.map_image + ') no-repeat center / cover'}", :href="props.map_link")
   .custom-contact-info__background

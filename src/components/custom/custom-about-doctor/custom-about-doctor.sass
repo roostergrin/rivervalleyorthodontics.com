@@ -16,6 +16,12 @@
   &__section-title
     @extend h2
 
+    @include phone-lg
+      font-size: 24px
+
+    @include phone
+      font-size: 18px
+
   &__icon
     margin-top: -10px
     display: none
@@ -47,3 +53,8 @@
     color: $white
     padding: 1.25rem 2.5rem
     max-width: 500px
+
+    @include tablet
+      left: 0
+      width: 100%
+      max-width: 100%
