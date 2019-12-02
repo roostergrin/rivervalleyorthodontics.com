@@ -1,6 +1,6 @@
 .block-hero-video
   .block-hero-video__bg
-    video(ref="hero", :src="props" loop playsinline autoplay)
+    video(ref="hero", :src="props" loop playsinline autoplay muted)
     .block-hero-video__video-control(@click="toggleVideoState(videoState)")
       .block-hero-video__video-control--play(v-if="!videoState") Play Video
       .block-hero-video__video-control--pause(v-else) Pause Video
