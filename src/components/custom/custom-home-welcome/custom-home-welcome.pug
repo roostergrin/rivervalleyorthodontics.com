@@ -1,6 +1,9 @@
 .custom-home-welcome
-  SectionTitle.custom-home-welcome__title(:title="props.title")
-  .custom-home-welcome__sub-title {{ props.sub_title}}
+  .custom-home-welcome__title-container
+    span.custom-home-welcome__upper-title {{ props.upper_title }}
+    span.custom-home-welcome__lower-title {{ props.lower_title }}
+    BaseIcon.custom-home-welcome__underline(name="DoubleWave500", :class="{'custom-home-welcome__underline--active' : animationState}")
+  .custom-home-welcome__sub-title(:class="{'custom-home-welcome__sub-title--active' : animationState}") {{ props.sub_title}}
   .custom-home-welcome__section
     .custom-home-welcome__container
       .custom-home-welcome__col-full.custom-home-welcome__flex
@@ -11,4 +14,4 @@
   .custom-home-welcome__container
     .custom-home-welcome__col-full.custom-home-welcome__flex-center
       .custom-home-welcome__schedule-text Schedule a consultation today to see how we can help you attain the smile you deserve.
-      .custom-home-welcome__button schedule your consultation
+      .custom-home-welcome__button(@click="redirectToContactForm") schedule your consultation

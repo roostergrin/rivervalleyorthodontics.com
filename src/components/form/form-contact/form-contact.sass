@@ -189,15 +189,18 @@
   &__submit-button
     position: relative
     border: none
-    background: $blue
+    background: $green
     cursor: pointer
     padding: 0
     overflow: hidden
     color: $white
+    box-shadow: 0px 4px 6px 0px rgba(34, 181, 115, 0.35)
+    transition: box-shadow .3s ease
 
     &:focus,
     &:active
       outline: transparent
+      box-shadow: none
 
     &:hover
       .form-contact__submit-overlay

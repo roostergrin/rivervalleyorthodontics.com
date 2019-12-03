@@ -28,8 +28,9 @@
     fill: $green
 
   &__title-container
-    margin: 0 .5rem
+    margin: 0 1rem
     cursor: pointer
+    color: #696969
 
     &:first-of-type
       margin-left: 0
@@ -40,9 +41,17 @@
     &--active
       color: $green
 
+      &:hover
+        color: $green !important
+
       .custom-about-doctor__icon
         display: block
 
+    &:hover
+      color: black
+
+    @include tablet
+      margin: 0 .5rem
 
   &__photo
     height: 60rem

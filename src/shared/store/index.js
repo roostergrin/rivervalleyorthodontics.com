@@ -14,7 +14,10 @@ const store = new Vuex.Store({
     navDrawer: false,
     loading: true,
     pages: {},
-    scrolled: {}
+    scrolled: {},
+    animationState: {
+      'home-welcome': false
+    }
   },
   mutations: mutations,
   actions: actions

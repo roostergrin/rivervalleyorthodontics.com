@@ -18,9 +18,6 @@ export default {
   methods: {
     redirectHome () {
       this.$router.push('/')
-    },
-    showRoute () {
-      console.log(this.$router.history.current.name)
     }
   }
 }

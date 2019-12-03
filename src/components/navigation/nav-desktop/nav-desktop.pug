@@ -1,12 +1,12 @@
 .nav-desktop(v-if="links", :class="{ 'nav-desktop--hide' : navState === 'hide', 'nav-desktop--top' : navState === 'top' }")
   .nav-desktop__top
     BaseIcon.nav-desktop__logo(name="Header-Logo-Full", :class="{'nav-desktop__logo--hide': navState}" @click.native="redirectHome")
-    .nav-desktop__active-link(@click="showRoute") {{ activeRoute }}
+    .nav-desktop__active-link {{ activeRoute }}
   .nav-desktop__bottom
   BaseIcon.nav-desktop__logo-small(name="Header-Logo-Minimal" @click.native="redirectHome")
   .nav-desktop__container
     .nav-desktop__row
-      .nav-desktop__phone-container
+      a.nav-desktop__phone-container(href="tel:208-678-3265")
         BaseIcon.nav-desktop__phone(name="Phone")
         .nav-desktop__phone-number 208-678-3265
       .nav-desktop__button Free Consultation

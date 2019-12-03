@@ -20,6 +20,7 @@
     flex-direction: column
     cursor: pointer
     margin: 0 1rem
+    color: #696969
 
     &:first-of-type
       margin-left: 0
@@ -30,8 +31,14 @@
     &--active
       color: $green
 
+      &:hover
+        color: $green !important
+
       .custom-treatments-braces__icon
         display: block
+
+    &:hover
+      color: black
 
   &__section
     @extend h2
@@ -40,6 +47,10 @@
     width: 100%
     margin-top: -5px
     display: none
+    fill: $green
+
+    &--blue
+      fill: $blue !important
 
   &__background
     height: 50rem
@@ -51,6 +62,7 @@
     color: $white
     padding: 1.5rem 2rem
     max-width: 400px
+    opacity: .9
 
   &__text-container
     height: 20rem

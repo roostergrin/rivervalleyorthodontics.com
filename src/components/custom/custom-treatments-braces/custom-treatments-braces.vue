@@ -7,6 +7,9 @@ export default {
   props: {
     props: {
       type: Object
+    },
+    makeUnderlineBlue: {
+      type: Boolean
     }
   },
   data: () => ({

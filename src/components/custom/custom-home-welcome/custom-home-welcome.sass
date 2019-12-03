@@ -2,8 +2,49 @@
   padding-top: 3.75rem
   padding-bottom: 3.75rem
 
-  &__title
+  &__title-container
+    @extend .container
+    @extend .flex-column
+    justify-content: flex-start
     margin-bottom: 1rem
+
+  &__upper-title,
+  &__lower-title
+    @extend .col-12
+    @extend h1
+
+    @include phone-lg
+      text-align: center
+
+  &__lower-title
+    margin-left: 1.5rem
+
+    @include tablet
+      margin: 0
+
+  &__underline
+    position: relative
+    margin: 0
+
+    @include phone-lg
+      width: 300px
+      margin: auto
+
+    svg
+      max-width: 300px
+
+    &--active:before
+      width: 0 !important
+
+    &:before
+      content: ''
+      position: absolute
+      height: 100%
+      width: 100%
+      background-color: $white
+      right: 0
+      transition: width 3s ease
+
 
   &__sub-title
     @extend h2
@@ -12,10 +53,16 @@
     padding: 20px 0px 20px 40px
     width: 90%
     margin-left: auto
+    transition: transform .5s ease
+    transform: translate(100%)
 
     @include tablet
       width: 100%
       text-align: center
+
+    &--active
+      transform: translate(0)
+
 
   &__section
     position: relative
@@ -76,3 +123,8 @@
     @extend .button
     margin-top: 1.25rem
     background-color: $blue
+    box-shadow: 4px 7px 10px 0 rgba(139, 139, 139, 0.5)
+    transition: box-shadow .3s ease
+
+    &:active
+      box-shadow: none

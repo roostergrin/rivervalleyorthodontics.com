@@ -1,5 +1,5 @@
 .pages-home(v-if='props')
   HeroVideo(:props="props.video_src")
-  Welcome(:props="props.welcome")
+  Welcome#home-welcome(:props="props.welcome", v-waypoint="{ active: true, callback: activateAnimation, options: thresholdOptions }")
   WhatSetsUsApart(:props="props.apart")
   Testimonials(:props="props.testimonials")

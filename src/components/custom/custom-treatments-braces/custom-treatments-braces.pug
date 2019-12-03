@@ -2,7 +2,7 @@
   SectionTitle(:title="props.title")
   .custom-treatments-braces__container
     .custom-treatments-braces__col
-      .custom-treatments-braces__section-container(v-for="(section, i) in props.types", :class="{'custom-treatments-braces__section-container--active' : activeIndex === i }", @click="updateIndex(i)")
+      .custom-treatments-braces__section-container(v-for="(section, i) in props.types", :class="{'custom-treatments-braces__section-container--active' : activeIndex === i, 'custom-treatments-section-container--blue' : makeUnderlineBlue }", @click="updateIndex(i)")
         .custom-treatments-braces__section {{ section.title }}
         BaseIcon.custom-treatments-braces__icon(name="SingleWave80-Thin")
   .custom-treatments-braces__background(:style="{'background': 'url(' + activeTreatment.background_img + ') no-repeat center / cover'}")

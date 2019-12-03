@@ -6,7 +6,10 @@ import Welcome from '@/components/custom/custom-home-welcome/custom-home-welcome
 import WhatSetsUsApart from '@/components/custom/custom-home-apart/custom-home-apart'
 import Testimonials from '@/components/custom/custom-home-testimonials/custom-home-testimonials'
 
+import { activateAnimation } from '@/shared/functionality/mixins'
+
 export default {
+  mixins: [activateAnimation],
   computed: {
     props () {
       return this.$store.state.pages.home

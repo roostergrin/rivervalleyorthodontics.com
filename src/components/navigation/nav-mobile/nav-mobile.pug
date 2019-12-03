@@ -7,8 +7,8 @@
       .nav-mobile__links-container
         span(v-for='(link, i) in links', :key="i")
           router-link.nav-mobile__link(:to="link") {{ link.name }}
-      //- .nav-mobile__info-container
-        //- .nav-mobile__button.nav-mobile__button--complimentary(@click="scrollToElement('#contact-us')") complimentary consultation
+      .nav-mobile__info-container
+        .nav-mobile__button.nav-mobile__button--complimentary(@click="redirectToContactForm") complimentary consultation
         //- a.nav-mobile__button.nav-mobile__button--rewards(:href="navigation.rewards_hub_link") rewards hub
         //- a.nav-mobile__phone(:href="'tel:' + formatPhone") {{ navigation.phone_number}}
         //- .nav-mobile__hours {{ navigation.hours }}
