@@ -13,7 +13,7 @@ const vendors = () => {
     container: 'body',
     duration: 1500,
     easing: 'ease',
-    offset: 0,
+    offset: -50,
     cancelable: true,
     onDone: false,
     onCancel: false,

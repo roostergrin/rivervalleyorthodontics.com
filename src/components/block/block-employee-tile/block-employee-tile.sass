@@ -9,20 +9,27 @@
   &:nth-of-type(2n)
     .block-employee-tile__name
       background-color: $green
-    .block-employee-tile__employee-info 
+    .block-employee-tile__employee-info
+      background-color: $green
+    .block-employee-tile__bio
       background-color: $green
 
   &--active
-    .block-employee-tile__employee-info 
+    overflow: scroll
+    .block-employee-tile__employee-info
       top: 0
 
-  &__employee-info 
+    .block-employee-tile__bio
+      overflow: visible
+      height: auto
+
+  &__employee-info
     position: absolute
     width: 100%
     height: 100%
     background-color: $blue
-    color: $white 
-    transition: top .3s ease 
+    color: $white
+    transition: top .3s ease
     top: 77%
 
   &__name
@@ -33,5 +40,8 @@
     padding: 2rem 1rem
     // pointer-events: none
 
-  &__bio 
-    padding: 0 .75rem
+  &__bio
+    padding: 0 .75rem 2rem .75rem
+    background-color: $blue
+    height: 0
+    overflow: hidden
