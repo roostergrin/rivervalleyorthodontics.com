@@ -1,7 +1,10 @@
 <template lang="pug" src="./nav-desktop.pug"></template>
 
 <script>
+import { scrollToElement } from '@/shared/functionality/mixins'
+
 export default {
+  mixins: [scrollToElement],
   props: {
     links: {
       type: Array
@@ -18,6 +21,13 @@ export default {
   methods: {
     redirectHome () {
       this.$router.push('/')
+    },
+    redirectToContactForm () {
+      new Promise((resolve, reject) => {
+        resolve(this.$router.push('contact-us'))
+      })
+        .then(() => this.$store.dispatch('VIEW_NAV_DRAWER', false))
+        .then(() => this.scrollToElement('#contact-form'))
     }
   }
 }
