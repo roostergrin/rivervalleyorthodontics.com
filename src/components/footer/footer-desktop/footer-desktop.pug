@@ -3,11 +3,11 @@
     .the-footer-desktop__section
       .the-footer-desktop__title Address
       .the-footer-desktop__content
-        .the-footer-desktop__text(v-html="address")
+        a.the-footer-desktop__text(v-html="address", :href="'http://maps.google.com/?q=' + address ")
     .the-footer-desktop__section
       .the-footer-desktop__title Phone
       .the-footer-desktop__content
-        .the-footer-desktop__text {{ phone }}
+        a.the-footer-desktop__text(:href="'tel:' + phone") {{ phone }}
 
   .the-footer-desktop__logo-container
     BaseIcon.the-footer-desktop__logo(name="Header-Logo-Full" @click.native="scrollToTop")

@@ -57,19 +57,9 @@
     height: 45px
     width: 45px
     border-radius: 100%
-    background-color: $green
+    background-color: #365491
     border: 1px solid transparent
     cursor: pointer
-
-    &:nth-of-type(2)
-      background-color: $blue
-      margin-left: 1rem
-
-      &:hover
-        border: 1px solid $blue
-
-        svg
-          fill: $blue
 
     svg
       fill: $white
@@ -78,11 +68,25 @@
 
     &:hover
       background-color: $white
-      border: 1px solid $green
+      border: 1px solid #365491
       fill: $green
 
       svg
-        fill: $green
+        fill:#365491
+
+    &:nth-of-type(2)
+      border: 1px solid transparent
+      background-color: transparent
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)
+      margin-left: 1rem
+      border: 0
+
+      &:hover
+        background: $white
+        border: 1px solid #d6249f
+
+        svg
+          fill: #d6249f
 
   &__text
     @extend h4
