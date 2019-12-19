@@ -1,5 +1,5 @@
 const api = () => {
-  return 'http://rivervalleyorthodontics.roostertest3.com//wp-json'
+  return 'https://rivervalleyorthodontics.com/wp-json'
 }
 
 export default api()
