@@ -6,7 +6,7 @@
 
   .the-footer-mobile__container
     .the-footer-mobile__col
-      a.the-footer-mobile__address(v-html="address", :href="'http://maps.google.com/?q=' + address ")
+      a.the-footer-mobile__address(v-html="address", :href="businessPageLink")
       a.the-footer-mobile__phone(:href="'tel:' + phone") {{ phone }}
 
   .the-footer-mobile__title-background

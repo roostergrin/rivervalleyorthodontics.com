@@ -3,6 +3,7 @@
 <script>
 import FooterDesktop from '@/components/footer/footer-desktop/footer-desktop'
 import FooterMobile from '@/components/footer/footer-mobile/footer-mobile'
+import Copyright from '@/components/block/block-footer-copyright/block-footer-copyright'
 
 export default {
   computed: {
@@ -17,7 +18,8 @@ export default {
   },
   components: {
     FooterDesktop,
-    FooterMobile
+    FooterMobile,
+    Copyright
   }
 }
 </script>
