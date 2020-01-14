@@ -1,4 +1,6 @@
 .custom-about-tour
   SectionTitle.custom-about-tour__title(:title="props.title")
   .custom-about-tour__container
-    .custom-about-tour__background
+    iframe.custom-about-tour__3d-tour(width='853' height='480' :src='props.tour_link' frameborder='0' allowfullscreen allow='vr')
+    SliderOfficeTour.custom-about-tour__image-carousel(:props="props")      
+

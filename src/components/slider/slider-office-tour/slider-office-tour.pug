@@ -1,0 +1,11 @@
+.slider-office-tour
+  .slider-office-tour__container
+    .slider-office-tour__slider
+      .slider-office-tour__button.slider-office-tour__button--prev(@click='changeSlide("prev")')
+        BaseIcon.slider-office-tour__icon(name="arrow")
+      .slider-office-tour__button.slider-office-tour__button--next(@click='changeSlide("next")')
+        BaseIcon.slider-office-tour__icon(name="arrow")
+      .slider-office-tour__slide(v-for='slide, i in props.images', :class="{'slider-office-tour__slide--active': i === currentSlide}")
+        img(:src='slide.image', alt='Sonrisas Office Image')
+
+      

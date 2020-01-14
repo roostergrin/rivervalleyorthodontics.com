@@ -1,0 +1,47 @@
+.slider-office-tour
+  position: relative
+
+  &__slider
+    @include phone-lg
+      height: rem-calc(300)
+    position: relative
+    padding: 0
+    height: 480px
+    width: 100%
+    overflow: hidden
+
+  &__button
+    display: flex
+    position: absolute
+    top: 50%
+    align-items: center
+    justify-content: center
+    z-index: 1
+    background-color: $white
+    width: rem-calc(32)
+    height: rem-calc(32)
+
+    &--prev
+      transform: rotate(180deg) translateY(50%)
+
+    &--next
+      right: 0
+      transform: translateY(-50%)
+
+  &__icon
+    width: rem-calc(8)
+
+  &__slide
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    transition: .3s ease-in-out opacity
+    opacity: 0
+    width: 100%
+
+    &--active
+      opacity: 1
+
+    img
+      width: 100%

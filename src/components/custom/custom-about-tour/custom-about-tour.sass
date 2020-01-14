@@ -3,13 +3,16 @@
 
   &__container
     position: relative
-    height: 40rem
     width: 100%
+    display: flex
+    justify-content: space-evenly
+    flex-wrap: wrap
 
-  &__background
-    position: absolute
-    width: 100%
-    height: 75%
-    background-color: $blue
-    z-index: -1
-    transform: translate(0, 15%)
+  &__title
+    text-align: center
+
+  &__3d-tour, &__image-carousel
+    margin: 20px 0
+
+  &__image-carousel
+    width: 853px
