@@ -5,11 +5,16 @@
       .custom-about-doctor__title-container(v-for="(section, i) in props.sections", :class="{'custom-about-doctor__title-container--active' : activeIndex === i}", @click="updateActiveSection(i)")
         .custom-about-doctor__section-title {{ section.title }}
         BaseIcon.custom-about-doctor__icon(name="SingleWave150-Thin")
-  .custom-about-doctor__photo(v-if="activeSection.title !== 'Personal'" :style="{ 'background' : 'url(' + props.img + ') no-repeat top / cover'}")
-    .custom-about-doctor__container
-      .custom-about-doctor__col-full
-        .custom-about-doctor__section-content {{ activeSection.content }}
-  .custom-about-doctor__photo(v-if="activeSection.title == 'Personal'" :style="{ 'background' : 'url(https://d2pznp0cj8j716.cloudfront.net/about/About-DrWard-Personal.jpg) no-repeat top / cover'}")
+  //- .custom-about-doctor__photo(v-if="activeSection.title !== 'Personal'" :style="{ 'background' : 'url(' + props.img + ') no-repeat top / cover'}")
+  //-   .custom-about-doctor__container
+  //-     .custom-about-doctor__col-full
+  //-       .custom-about-doctor__section-content {{ activeSection.content }}
+  .custom-about-doctor__container(v-if="activeSection.title !== 'Personal'")
+    .custom-about-doctor__col-full
+      .custom-about-doctor__section-content {{ activeSection.content }}
+      .custom-about-doctor__wrapper
+        .custom-about-doctor__photo(:style="{ 'background' : 'url(' + props.img + ') no-repeat top / cover'}")
+  .custom-about-doctor__photo--personal(v-if="activeSection.title == 'Personal'" :style="{ 'background' : 'url(https://d2pznp0cj8j716.cloudfront.net/about/About-DrWard-Personal.jpg) no-repeat top / cover'}")
     .custom-about-doctor__container
       .custom-about-doctor__col-full
         .custom-about-doctor__section-content {{ activeSection.content }}

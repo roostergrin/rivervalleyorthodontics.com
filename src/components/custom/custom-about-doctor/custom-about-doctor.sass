@@ -1,4 +1,8 @@
 .custom-about-doctor
+  &__wrapper
+    width: 100%
+    display: flex
+    justify-content: center
 
   &__title
     margin-top: 3.75rem
@@ -54,7 +58,15 @@
       margin: 0 .5rem
 
   &__photo
-    height: 60rem
+    height: 30rem
+    width: 20rem
+    margin-left: 50%
+    @include tablet
+      margin-left: 0
+      margin-top: 20rem
+
+    &--personal
+      height: 60rem
 
   &__section-content
     position: absolute
