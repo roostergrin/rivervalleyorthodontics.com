@@ -1,0 +1,10 @@
+.pages-statement(v-if="props")
+  HeroImg(:img="props.img", title="Accessibility Statement")
+  .block-title.custom-about-doctor__title
+    .block-title__container
+      .block-title__title(v-html='`${companyName} Accessibility Statement`')
+      BaseIcon.block-title__underline(name="DoubleWave250-01", :style="{'fill' : barColor }")
+      .statement_content
+        p(v-html='`${companyName} is committed to facilitating the accessibility and usability of its website, ${domain}, for everyone.  ${companyName} aims to comply with all applicable standards, including the World Wide Web Consortiums Web Content Accessibility Guidelines 2.0 up to Level AA (WCAG 2.0 AA). ${companyName} is proud of the efforts that we have completed and that are in-progress to ensure that our website is accessible to everyone.`')
+        br
+        p(v-html='`We highly recommend using the userway accessibility widget linked in the footer, but should you experience any difficulty in accessing any part of this website, please feel free to ${phone ? "call us at " + phone : ""} ${phone && email ? "or" : ""} ${email ? "email us at " + formattedEmail : ""} and we will work with you to provide the information or service you seek through an alternate communication method that is accessible for you consistent with applicable law (for example, through telephone support).`')   

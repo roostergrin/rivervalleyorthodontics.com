@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import PageNotFound from 'pages/404/404'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
+import accessibilityStatement from 'pages/accessibility-statement/accessibility-statement'
 
 const Home = () => import('@/pages/home/home')
 const About = () => import('@/pages/about/about')
@@ -43,6 +44,12 @@ const router = new VueRouter({
       name: 'Contact Us',
       navigation: true,
       component: Contact
+    },
+    {
+      path: '/accessibility-statement',
+      name: 'Accessibility Statement',
+      navigation: false,
+      component: accessibilityStatement
     },
     {
       path: '/*',

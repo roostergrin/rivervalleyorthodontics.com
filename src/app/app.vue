@@ -3,6 +3,7 @@
 <script>
 import TheNavigation from 'components/navigation/navigation'
 import TheFooter from 'components/footer/footer'
+import BaseBaseAccess from 'components/base-access/index'
 
 export default {
   async created () {
@@ -13,7 +14,8 @@ export default {
   },
   components: {
     TheNavigation,
-    TheFooter
+    TheFooter,
+    BaseBaseAccess
   }
 }
 </script>
