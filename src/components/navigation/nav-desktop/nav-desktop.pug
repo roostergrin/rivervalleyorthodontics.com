@@ -9,6 +9,6 @@
       a.nav-desktop__phone-container(href="tel:208-678-3265")
         BaseIcon.nav-desktop__phone(name="Phone")
         .nav-desktop__phone-number 208-678-3265
-      .nav-desktop__button(@click="redirectToContactForm") Free Consultation
+      a.nav-desktop__button(href='mailto:frontdesk@RVOsmiles.com') Free Consultation
     .nav-desktop__row
       router-link.nav-desktop__link(v-for="(link, i) in links", :key="i", :to="link.path", v-html="link.name")
