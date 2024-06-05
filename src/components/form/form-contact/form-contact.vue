@@ -49,7 +49,8 @@ export default {
         email: this.clientEmail,
         phone: this.clientPhone,
         firstTime: this.isFirstTime,
-        clientMessage: this.clientMessage
+        clientMessage: this.clientMessage,
+        message: this.clientMessage
       })
         .then(res => {
           this.formSuccess = true
