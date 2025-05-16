@@ -9,7 +9,7 @@ const About = () => import('@/pages/about/about')
 const Treatments = () => import('@/pages/treatments/treatments')
 const Patients = () => import('@/pages/patients/patients')
 const Contact = () => import('@/pages/contact/contact')
-const KidsOrthodontics = () => import('@/pages/kids-orthodontics/kids-orthodontics')
+//const KidsOrthodontics = () => import('@/pages/kids-orthodontics/kids-orthodontics')
 
 Vue.use(VueRouter)
 
@@ -40,12 +40,14 @@ const router = new VueRouter({
       navigation: true,
       component: Patients
     },
+    /*
     {
       path: '/all-kids-should-see-the-orthodontist-by-age-7',
       name: 'All Kids Should See the Orthodontist by Age 7',
       navigation: true,
       component: KidsOrthodontics
     },
+    */
     {
       path: '/contact-us',
       name: 'Contact Us',

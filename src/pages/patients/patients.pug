@@ -1,5 +1,8 @@
 .pages-patients(v-if="props")
   HeroImg(:img="props.img", :title="props.title")
   Forms(:props="props.forms")
+  .info-flyer__container
+    img.info-flyer(src="https://rivervalleyorthodontics.com/wp-content/uploads/postcard-1.jpg")
+    img.info-flyer(src="https://rivervalleyorthodontics.com/wp-content/uploads/postcard-2.jpg")
   Rewards#rewards(:props="props.rewards")
   //- Payment(:props="props.payment")

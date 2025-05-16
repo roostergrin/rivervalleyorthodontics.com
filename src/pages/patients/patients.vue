@@ -20,3 +20,15 @@ export default {
   }
 }
 </script>
+<style>
+    .info-flyer {
+      margin: 0 auto;
+      max-width: 100%;
+    }
+    .info-flyer__container {
+      display: inline-block;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+</style>
