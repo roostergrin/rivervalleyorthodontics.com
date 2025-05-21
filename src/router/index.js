@@ -9,7 +9,7 @@ const About = () => import('@/pages/about/about')
 const Treatments = () => import('@/pages/treatments/treatments')
 const Patients = () => import('@/pages/patients/patients')
 const Contact = () => import('@/pages/contact/contact')
-//const KidsOrthodontics = () => import('@/pages/kids-orthodontics/kids-orthodontics')
+// const KidsOrthodontics = () => import('@/pages/kids-orthodontics/kids-orthodontics')
 
 Vue.use(VueRouter)
 
