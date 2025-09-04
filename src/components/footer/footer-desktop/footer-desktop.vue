@@ -30,7 +30,20 @@ export default {
     redirect (url) {
       const win = window.open(url, '_blank')
       win.focus()
+    },
+    loadWeaveWidget () {
+      if (typeof window === 'undefined' || typeof document === 'undefined') return
+      if (document.getElementById('weave-text-connect-widget')) return
+
+      const s = document.createElement('script')
+      s.id = 'weave-text-connect-widget'
+      s.src = 'https://book.getweave.com/text-connect/0d34186c-77a2-46f7-822a-fed881d6ef00/widget.js'
+      s.defer = true
+      document.head.appendChild(s)
     }
+  },
+  mounted () {
+    this.loadWeaveWidget()
   }
 }
 </script>
