@@ -1,8 +1,27 @@
-.pages-patients(v-if="props")
-  HeroImg(:img="props.img", :title="props.title")
-  Forms(:props="props.forms")
-  .info-flyer__container
-    img.info-flyer(src="https://rivervalleyorthodontics.com/wp-content/uploads/postcard-1.jpg")
-    img.info-flyer(src="https://rivervalleyorthodontics.com/wp-content/uploads/postcard-2.jpg")
-  Rewards#rewards(:props="props.rewards")
-  //- Payment(:props="props.payment")
+.page-wrapper(v-if="props")
+  .nav-spacer
+  .pages-patients
+    .pages-patients__container
+      .pages-patients__col-full
+        .pages-patients__title-container(
+          v-for="(tab, i) in tabs",
+          :key="i",
+          :class="{'pages-patients__title-container--active' : activeIndex === i}",
+          @click="updateActiveTab(i)"
+        )
+          .pages-patients__tab-title {{ tab.title }}
+          BaseIcon.pages-patients__icon(name="SingleWave150-Thin")
+
+    .pages-patients__content
+      .pages-patients__tab-content(v-if="activeTab.key === 'new-braces'")
+        NewBraces(:props="props.new_braces")
+      .pages-patients__tab-content(v-if="activeTab.key === 'forms'")
+        Forms(:props="props.forms")
+      .pages-patients__tab-content(v-if="activeTab.key === 'early-smiles'")
+        .info-flyer__container
+          img.info-flyer(src="https://rivervalleyorthodontics.com/wp-content/uploads/postcard-1.jpg")
+          img.info-flyer(src="https://rivervalleyorthodontics.com/wp-content/uploads/postcard-2.jpg")
+        //-.pages-patients__tab-content(v-if="activeTab.key === 'temporary-relief'")
+          .placeholder-content Events component will go here
+        //-.pages-patients__tab-content(v-if="activeTab.key === 'events'")
+          p Coming soon!

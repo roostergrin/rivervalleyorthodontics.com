@@ -1,0 +1,25 @@
+.custom-new-braces(v-if="props && props.length")
+  .custom-new-braces__item(v-for="(item, index) in props" :key="index")
+    .custom-new-braces__container
+      .custom-new-braces__col-video(v-if="item.video")
+        .custom-new-braces__video-wrapper
+          iframe.custom-new-braces__video(
+            v-if="item.video_type === 'youtube' && getYouTubeId(item.video)",
+            :src="getYouTubeEmbedUrl(item.video)",
+            frameborder="0",
+            allowfullscreen
+          )
+          video.custom-new-braces__video(
+            v-else-if="item.video_type === 'mp4'",
+            controls,
+            preload="metadata"
+          )
+            source(:src="item.video" type="video/mp4")
+            | Your browser does not support the video tag.
+      .custom-new-braces__col-content
+        .custom-new-braces__content
+          h3.custom-new-braces__title(v-if="item.title" v-html='item.title')
+          .custom-new-braces__description(v-if="item.description" v-html="item.description")
+    .custom-new-braces__document(v-if="item.document")
+      .custom-new-braces__document-embed
+        img.custom-new-braces__document-img(:src="item.document")
