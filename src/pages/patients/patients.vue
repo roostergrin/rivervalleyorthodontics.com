@@ -46,6 +46,14 @@ $green: #94c733;
 }
 
 .pages-patients {
+  justify-content: center;
+
+  &__header {
+    color: $green;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
   &__col-full {
     display: flex;
     justify-content: center;
