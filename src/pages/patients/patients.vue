@@ -11,11 +11,11 @@ export default {
       tabs: [
         { title: 'New Braces Info', key: 'new-braces' },
         { title: 'Patient Forms', key: 'forms' },
-        { title: 'Early Smiles Club', key: 'early-smiles' }
+        { title: 'Early Smiles Club', key: 'early-smiles' },
+        { title: 'Temporary Relief Tips', key: 'temporary-relief' }
         /*
-        { title: 'Temporary Relief Tips', key: 'temporary-relief' },
         { title: 'Events', key: 'events' }
-         */
+        */
       ]
     }
   },

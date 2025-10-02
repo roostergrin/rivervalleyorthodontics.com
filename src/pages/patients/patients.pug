@@ -22,7 +22,7 @@
         .info-flyer__container
           img.info-flyer(src="https://rivervalleyorthodontics.com/wp-content/uploads/postcard-1.jpg")
           img.info-flyer(src="https://rivervalleyorthodontics.com/wp-content/uploads/postcard-2.jpg")
-        //-.pages-patients__tab-content(v-if="activeTab.key === 'temporary-relief'")
-          .placeholder-content Events component will go here
+      .pages-patients__tab-content(v-if="activeTab.key === 'temporary-relief'")
+        NewBraces(:props="props.temporary_relief")
         //-.pages-patients__tab-content(v-if="activeTab.key === 'events'")
           p Coming soon!
