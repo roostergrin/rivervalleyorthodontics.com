@@ -14,9 +14,9 @@ function rg_serve_route () {
   global $wpdb;
 
   $data = json_decode(file_get_contents("php://input"), true);
-  $from = 'info@wordpress.com';
-  $to = 'marketing@rvosmiles.com';
-  $subject = 'API Contact Form';
+  $from = 'no-reply@rivervalleyorthodontics.com';
+  $to = 'frontdesk@rvosmiles.com';
+  $subject = 'New Contact Form Submission';
   $headers = array('Content-Type: text/html; charset=UTF-8');
   $message = '<html><body>';
   $message .= '<p><h4><strong>Form Submission by: </strong></h4>' . $data['name'] . '</p>';
