@@ -2,16 +2,18 @@
 
 <script>
 import MenuButton from '@/components/block/block-menu-button/block-menu-button'
-import { scrollToElement } from '@/shared/functionality/mixins'
 
 export default {
-  mixins: [scrollToElement],
   props: {
     links: {
       type: Array
     }
   },
   computed: {
+    navigation () {
+      const footer = this.$store.state.app.footer
+      return footer && footer.navigation ? footer.navigation : {}
+    },
     drawerState () {
       return this.$store.state.navDrawer
     },
@@ -28,13 +30,6 @@ export default {
     redirectHome () {
       this.$router.push('/')
       this.$store.dispatch('VIEW_NAV_DRAWER', false)
-    },
-    redirectToContactForm () {
-      new Promise((resolve, reject) => {
-        resolve(this.$router.push('contact-us'))
-      })
-        .then(() => this.$store.dispatch('VIEW_NAV_DRAWER', false))
-        .then(() => this.scrollToElement('#contact-form'))
     }
   },
   watch: {

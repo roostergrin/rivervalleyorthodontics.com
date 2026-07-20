@@ -11,6 +11,10 @@ export default {
     }
   },
   computed: {
+    navigation () {
+      const footer = this.$store.state.app.footer
+      return footer && footer.navigation ? footer.navigation : {}
+    },
     navState () {
       return this.$store.state.navState
     },
