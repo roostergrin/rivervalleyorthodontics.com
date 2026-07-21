@@ -13,6 +13,8 @@
       background-color: $green
     .block-employee-tile__bio
       background-color: $green
+    .block-employee-tile__position
+      background-color: $green
 
   &--active
     overflow: scroll
@@ -37,8 +39,16 @@
     @extend .flex-row-center
     color: $white
     background-color: $blue
-    padding: 2rem 1rem
+    padding: 1.4rem 1rem .35rem
     // pointer-events: none
+
+  &__position
+    min-height: 2.5rem
+    padding: 0 .75rem 1rem
+    background-color: $blue
+    color: $white
+    text-align: center
+    line-height: 1.25
 
   &__bio
     padding: 0 .75rem 2rem .75rem

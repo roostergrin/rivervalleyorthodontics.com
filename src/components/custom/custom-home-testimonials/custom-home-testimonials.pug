@@ -10,3 +10,4 @@
       .custom-home-testimonials__date {{ activeTestimonial.date }}
       .custom-home-testimonials__dots-container
         .custom-home-testimonials__dot(v-for="(dot, i) in testimonials", :class="{'custom-home-testimonials__dot--active' : currentIndex === i }" @click="jumpToIndex(i)")
+      a.custom-home-testimonials__google-link(:href="businessPageLink", target="_blank", rel="noopener noreferrer") Read more Google reviews

@@ -1,4 +1,5 @@
 .block-employee-tile( @click="toggleState", :style="{ 'background' : 'url(' + props.img + ') no-repeat center / cover'}", :class="{'block-employee-tile--active': active }")
   .block-employee-tile__employee-info 
     .block-employee-tile__name {{ props.name }}
+    .block-employee-tile__position(v-if="props.position") {{ props.position }}
     .block-employee-tile__bio {{ props.bio }}

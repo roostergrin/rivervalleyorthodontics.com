@@ -5,7 +5,7 @@
   .nav-mobile__menu
     .nav-mobile__menu-wrapper
       .nav-mobile__links-container
-        span(v-for='(link, i) in filteredLinks', :key="i")
+        span(v-for='(link, i) in links', :key="i")
           router-link.nav-mobile__link(:to="link") {{ link.name }}
       .nav-mobile__info-container
         a.nav-mobile__button.nav-mobile__button--complimentary(

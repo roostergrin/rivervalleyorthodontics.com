@@ -1,7 +1,6 @@
 <template lang="pug" src="./patients.pug"></template>
 
 <script>
-import Forms from '@/components/custom/custom-patients-forms/custom-patients-forms'
 import NewBraces from '@/components/custom/custom-new-braces/custom-new-braces'
 
 export default {
@@ -10,7 +9,6 @@ export default {
       activeIndex: 0,
       tabs: [
         { title: 'New Braces Info', key: 'new-braces' },
-        { title: 'Patient Forms', key: 'forms' },
         { title: 'Early Smiles Club', key: 'early-smiles' },
         { title: 'Temporary Relief Tips', key: 'temporary-relief' }
         /*
@@ -25,6 +23,17 @@ export default {
     },
     activeTab () {
       return this.tabs[this.activeIndex]
+    },
+    earlySmilesVideos () {
+      if (!this.props || !Array.isArray(this.props.new_braces)) return []
+      const titles = [
+        'Did you know that kids should see the orthodontist at age 7?',
+        'What to expect at a kids consultation',
+        'Why do I see young kids in braces?'
+      ]
+      return titles
+        .map(title => this.props.new_braces.find(item => item.title === title))
+        .filter(Boolean)
     }
   },
   methods: {
@@ -33,7 +42,6 @@ export default {
     }
   },
   components: {
-    Forms,
     NewBraces
   }
 }
@@ -102,14 +110,30 @@ $green: #94c733;
 }
 
 .info-flyer {
-  margin: 0 auto;
-  max-width: 100%;
+  display: block;
+  width: calc(50% - .75rem);
+  max-width: 560px;
 }
 
 .info-flyer__container {
-  display: inline-block;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1244px;
+  margin: 0 auto 4rem;
+  padding: 0 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .info-flyer {
+    width: 100%;
+    max-width: none;
+  }
+
+  .info-flyer__container {
+    gap: 1rem;
+    padding: 0 16px;
+  }
 }
 </style>

@@ -19,11 +19,6 @@ export default {
     },
     drawerState () {
       return this.$store.state.navDrawer
-    },
-    filteredLinks () {
-      return this.links.filter(function (u) {
-        return u.path !== '/for-patients'
-      })
     }
   },
   methods: {

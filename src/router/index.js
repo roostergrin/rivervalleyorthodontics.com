@@ -9,6 +9,7 @@ const About = () => import('@/pages/about/about')
 const Treatments = () => import('@/pages/treatments/treatments')
 const Patients = () => import('@/pages/patients/patients')
 const Contact = () => import('@/pages/contact/contact')
+const Community = () => import('@/pages/community/community')
 // const KidsOrthodontics = () => import('@/pages/kids-orthodontics/kids-orthodontics')
 
 Vue.use(VueRouter)
@@ -23,6 +24,24 @@ const router = new VueRouter({
       component: Home
     },
     {
+      path: '/contact-us',
+      name: 'Contact Us',
+      navigation: true,
+      component: Contact
+    },
+    {
+      path: '/for-patients',
+      name: 'For Patients',
+      navigation: true,
+      component: Patients
+    },
+    {
+      path: '/community',
+      name: 'Community',
+      navigation: true,
+      component: Community
+    },
+    {
       path: '/about',
       name: 'About',
       navigation: true,
@@ -31,14 +50,8 @@ const router = new VueRouter({
     {
       path: '/treatments',
       name: 'Treatments',
-      navigation: true,
+      navigation: false,
       component: Treatments
-    },
-    {
-      path: '/for-patients',
-      name: 'For Patients',
-      navigation: true,
-      component: Patients
     },
     /*
     {
@@ -48,12 +61,6 @@ const router = new VueRouter({
       component: KidsOrthodontics
     },
     */
-    {
-      path: '/contact-us',
-      name: 'Contact Us',
-      navigation: true,
-      component: Contact
-    },
     {
       path: '/accessibility-statement',
       name: 'Accessibility Statement',
