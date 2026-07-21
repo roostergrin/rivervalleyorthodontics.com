@@ -1,25 +1,50 @@
 .custom-new-braces(v-if="props && props.length")
-  .custom-new-braces__item(v-for="(item, index) in props" :key="index")
-    .custom-new-braces__container
-      .custom-new-braces__col-video(v-if="item.video")
-        .custom-new-braces__video-wrapper
-          iframe.custom-new-braces__video(
-            v-if="item.video_type === 'youtube' && getYouTubeId(item.video)",
-            :src="getYouTubeEmbedUrl(item.video)",
-            frameborder="0",
-            allowfullscreen
-          )
-          video.custom-new-braces__video(
-            v-else-if="item.video_type === 'mp4'",
-            controls,
-            preload="metadata"
-          )
-            source(:src="item.video" type="video/mp4")
-            | Your browser does not support the video tag.
-      .custom-new-braces__col-content
-        .custom-new-braces__content
-          h3.custom-new-braces__title(v-if="item.title" v-html='item.title')
-          .custom-new-braces__description(v-if="item.description" v-html="item.description")
-    .custom-new-braces__document(v-if="item.document")
-      .custom-new-braces__document-embed
-        img.custom-new-braces__document-img(:src="item.document")
+  .custom-new-braces__horizontal-gallery(v-if="gallery")
+    article.custom-new-braces__gallery-card(v-for="(item, index) in props" :key="index")
+      .custom-new-braces__video-wrapper(v-if="item.video")
+        iframe.custom-new-braces__video(
+          v-if="item.video_type === 'youtube' && getYouTubeId(item.video)",
+          :src="getYouTubeEmbedUrl(item.video)",
+          frameborder="0",
+          allowfullscreen
+        )
+      h3.custom-new-braces__title(v-if="item.title" v-html="item.title")
+  template(v-else v-for="(item, index) in props")
+    section.custom-new-braces__elastics(v-if="isFirstElastic(item)" :key="'elastics-' + index")
+      .custom-new-braces__elastics-container
+        h2.custom-new-braces__elastics-title Elastics
+        .custom-new-braces__horizontal-gallery
+          article.custom-new-braces__gallery-card(v-for="(elastic, elasticIndex) in elasticItems" :key="elasticIndex")
+            .custom-new-braces__video-wrapper(v-if="elastic.video")
+              iframe.custom-new-braces__video(
+                v-if="elastic.video_type === 'youtube' && getYouTubeId(elastic.video)",
+                :src="getYouTubeEmbedUrl(elastic.video)",
+                frameborder="0",
+                allowfullscreen
+              )
+            h3.custom-new-braces__title(v-if="elastic.title" v-html="elastic.title")
+    .custom-new-braces__item(v-else-if="!isElastic(item)" :key="index")
+      .custom-new-braces__container
+        .custom-new-braces__col-video(v-if="item.video")
+          .custom-new-braces__video-wrapper
+            iframe.custom-new-braces__video(
+              v-if="item.video_type === 'youtube' && getYouTubeId(item.video)",
+              :src="getYouTubeEmbedUrl(item.video)",
+              frameborder="0",
+              allowfullscreen
+            )
+            video.custom-new-braces__video(
+              v-else-if="item.video_type === 'mp4'",
+              controls,
+              preload="metadata"
+            )
+              source(:src="item.video" type="video/mp4")
+              | Your browser does not support the video tag.
+        .custom-new-braces__col-content
+          .custom-new-braces__content
+            h3.custom-new-braces__title(v-if="item.title" v-html="item.title")
+            .custom-new-braces__description(v-if="item.description" v-html="item.description")
+      .custom-new-braces__document-container(v-if="item.document")
+        .custom-new-braces__document
+          .custom-new-braces__document-embed
+            img.custom-new-braces__document-img(:src="item.document")

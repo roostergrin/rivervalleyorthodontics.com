@@ -1,0 +1,60 @@
+.pages-community(v-if="props")
+  .pages-community__container
+    h1.pages-community__title {{ pageHeading }}
+    .pages-community__intro(v-if="community.intro", v-html="community.intro")
+
+    section.pages-community__event(v-for="(event, eventIndex) in events", :key="eventIndex")
+      h2.pages-community__event-title {{ event.title }}
+      .pages-community__event-main
+        .pages-community__featured(v-if="imageUrl(event.featured_image)")
+          img(
+            :src="imageUrl(event.featured_image)",
+            :alt="imageAlt(event.featured_image, event.title + ' community event')",
+            :loading="eventIndex === 0 ? 'eager' : 'lazy'"
+          )
+        .pages-community__announcement
+          h3.pages-community__section-label Announcement
+          .pages-community__date(v-if="event.date") {{ event.date }}
+          .pages-community__copy(v-if="event.announcement", v-html="event.announcement")
+
+      .pages-community__details(v-if="event.details")
+        h3.pages-community__section-label Details
+        .pages-community__details-copy(v-html="event.details")
+
+      .pages-community__gallery(v-if="galleryImages(event.gallery).length")
+        .pages-community__gallery-header
+          h3.pages-community__section-label.pages-community__section-label--large Photo Gallery
+          .pages-community__gallery-controls
+            button.pages-community__gallery-control(
+              type="button",
+              :aria-label="'View previous ' + event.title + ' photos'",
+              @click="scrollGallery(eventIndex, -1)"
+            ) &#8249;
+            button.pages-community__gallery-control(
+              type="button",
+              :aria-label="'View more ' + event.title + ' photos'",
+              @click="scrollGallery(eventIndex, 1)"
+            ) &#8250;
+        .pages-community__gallery-grid(:ref="'gallery-' + eventIndex")
+          figure.pages-community__gallery-item(
+            v-for="(image, imageIndex) in galleryImages(event.gallery)",
+            :key="imageIndex"
+          )
+            img(:src="imageUrl(image)", :alt="imageAlt(image, event.title + ' gallery photo')")
+            figcaption(v-if="image.caption") {{ image.caption }}
+
+      .pages-community__videos(v-if="eventVideos(event.videos).length")
+        h3.pages-community__section-label.pages-community__section-label--large Videos
+        .pages-community__video-grid
+          .pages-community__video(v-for="(video, videoIndex) in eventVideos(event.videos)", :key="videoIndex")
+            h4(v-if="video.title") {{ video.title }}
+            iframe(
+              v-if="youtubeEmbedUrl(video.url)",
+              :src="youtubeEmbedUrl(video.url)",
+              :title="video.title || event.title + ' video'",
+              frameborder="0",
+              allowfullscreen
+            )
+            video(v-else-if="isMp4(video.url)", controls, preload="metadata")
+              source(:src="video.url", type="video/mp4")
+            a(v-else, :href="video.url", target="_blank", rel="noopener noreferrer") Watch video

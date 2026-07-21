@@ -1,0 +1,177 @@
+.pages-community
+  padding: 190px 0 5rem
+  background: $white
+
+  @include tablet
+    padding-top: 150px
+
+  &__container
+    @extend .container
+    display: block
+
+  &__title
+    color: $green
+    padding-bottom: 1.5rem
+    margin-bottom: 0
+    border-bottom: 2px solid rgba($brownGray, .28)
+
+  &__intro
+    max-width: 800px
+    margin: 2rem 0 0
+
+  &__event
+    padding: 3rem 0 3.5rem
+    border-bottom: 2px solid rgba($brownGray, .28)
+
+    &:last-child
+      border-bottom: 0
+
+  &__event-main
+    display: grid
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr)
+    align-items: start
+    gap: 3rem
+
+    @include tablet
+      grid-template-columns: 1fr
+      gap: 2rem
+
+  &__featured
+    img
+      display: block
+      width: 100%
+      aspect-ratio: 16 / 9
+      object-fit: cover
+      background: rgba($brownGray, .08)
+      box-shadow: 4px 7px 18px rgba($brownGray, .22)
+
+  &__announcement
+    padding-top: .25rem
+
+  &__event-title
+    color: $green
+    margin-bottom: 1.75rem
+
+  &__section-label
+    margin-bottom: 1rem
+    color: $blue
+    font-family: Raleway
+    font-size: .9rem
+    font-weight: 700
+    letter-spacing: .12em
+    text-transform: uppercase
+
+    &--large
+      margin-bottom: 1.25rem
+      font-size: 1rem
+
+  &__date
+    margin-bottom: 1rem
+    color: $green
+    font-family: Raleway
+    font-weight: 700
+
+  &__copy
+    margin-bottom: 1rem
+    font-family: Libre Baskerville
+    font-size: 1.35rem
+    line-height: 1.5
+    color: $brownGray
+
+  &__details
+    max-width: 760px
+    margin-top: 2rem
+    padding-top: 1.5rem
+    border-top: 1px solid rgba($brownGray, .2)
+
+  &__details-copy
+    line-height: 1.7
+
+  &__gallery,
+  &__videos
+    margin-top: 2.75rem
+
+  &__gallery-header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 1rem
+
+    .pages-community__section-label
+      margin-bottom: 0
+
+  &__gallery-controls
+    display: flex
+    gap: .5rem
+
+  &__gallery-control
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 2.75rem
+    height: 2.75rem
+    padding: 0
+    border: 2px solid $green
+    border-radius: 50%
+    background: $white
+    color: $green
+    font-family: Arial, sans-serif
+    font-size: 2rem
+    line-height: 1
+    cursor: pointer
+
+    &:hover,
+    &:focus
+      background: $green
+      color: $white
+
+  &__gallery-grid
+    display: flex
+    gap: 1rem
+    overflow-x: auto
+    margin-top: 1.25rem
+    padding-bottom: 1rem
+    scroll-snap-type: x proximity
+
+  &__video-grid
+    display: grid
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+    gap: 1rem
+
+    @include tablet
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+
+    @include phone-lg
+      grid-template-columns: 1fr
+
+  &__gallery-item
+    flex: 0 0 360px
+    margin: 0
+    scroll-snap-align: start
+
+    @include phone-lg
+      flex-basis: 82vw
+
+    img
+      display: block
+      width: 100%
+      aspect-ratio: 4 / 3
+      object-fit: cover
+
+    figcaption
+      padding-top: .5rem
+      color: $brownGray
+
+  &__video
+    h4
+      margin-bottom: .5rem
+
+    iframe,
+    video
+      display: block
+      width: 100%
+      aspect-ratio: 16 / 9
+
+    a
+      color: $blue
+      text-decoration: underline

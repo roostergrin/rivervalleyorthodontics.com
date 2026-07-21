@@ -6,10 +6,26 @@ export default {
     props: {
       type: Array,
       default: () => []
+    },
+    gallery: {
+      type: Boolean,
+      default: false
+    }
+  },
+
+  computed: {
+    elasticItems () {
+      return this.props.filter(item => this.isElastic(item))
     }
   },
 
   methods: {
+    isElastic (item) {
+      return Boolean(item && /^Properly Placing .* Elastics$/i.test(item.title || ''))
+    },
+    isFirstElastic (item) {
+      return this.elasticItems.length > 0 && item === this.elasticItems[0]
+    },
     getYouTubeId (url) {
       if (!url) return null
       const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/

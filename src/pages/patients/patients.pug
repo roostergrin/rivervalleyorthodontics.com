@@ -16,12 +16,11 @@
     .pages-patients__content
       .pages-patients__tab-content(v-if="activeTab.key === 'new-braces'")
         NewBraces(:props="props.new_braces")
-      .pages-patients__tab-content(v-if="activeTab.key === 'forms'")
-        Forms(:props="props.forms")
       .pages-patients__tab-content(v-if="activeTab.key === 'early-smiles'")
         .info-flyer__container
           img.info-flyer(src="https://rivervalleyorthodontics.com/wp-content/uploads/postcard-1.jpg")
           img.info-flyer(src="https://rivervalleyorthodontics.com/wp-content/uploads/postcard-2.jpg")
+        NewBraces(:props="earlySmilesVideos", :gallery="true")
       .pages-patients__tab-content(v-if="activeTab.key === 'temporary-relief'")
         NewBraces(:props="props.temporary_relief")
         //-.pages-patients__tab-content(v-if="activeTab.key === 'events'")
