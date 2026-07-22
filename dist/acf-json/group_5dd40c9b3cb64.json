@@ -1,0 +1,180 @@
+{
+  "key": "group_5dd40c9b3cb64",
+  "title": "About-Team",
+  "fields": [
+    {
+      "key": "field_5dd40ca80fb25",
+      "label": "teams",
+      "name": "teams",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 0,
+      "max": 0,
+      "layout": "block",
+      "button_label": "Add Row",
+      "sub_fields": [
+        {
+          "key": "field_5dd40f300fb26",
+          "label": "title",
+          "name": "title",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": "",
+          "parent_repeater": "field_5dd40ca80fb25"
+        },
+        {
+          "key": "field_5dd40fbf0fb27",
+          "label": "staff",
+          "name": "staff",
+          "aria-label": "",
+          "type": "repeater",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "collapsed": "",
+          "min": 0,
+          "max": 0,
+          "layout": "block",
+          "button_label": "Add Row",
+          "sub_fields": [
+            {
+              "key": "field_5dd40fe60fb28",
+              "label": "name",
+              "name": "name",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": "",
+              "maxlength": "",
+              "parent_repeater": "field_5dd40fbf0fb27"
+            },
+            {
+              "key": "field_5dd40fed0fb29",
+              "label": "img",
+              "name": "img",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": "",
+              "maxlength": "",
+              "parent_repeater": "field_5dd40fbf0fb27"
+            },
+            {
+              "key": "field_e373a00054c35",
+              "label": "position",
+              "name": "position",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": "",
+              "maxlength": "",
+              "parent_repeater": "field_5dd40fbf0fb27"
+            },
+            {
+              "key": "field_5ddbf536dddb4",
+              "label": "bio",
+              "name": "bio",
+              "aria-label": "",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "placeholder": "",
+              "maxlength": "",
+              "rows": "",
+              "new_lines": "",
+              "parent_repeater": "field_5dd40fbf0fb27"
+            }
+          ],
+          "rows_per_page": 20,
+          "parent_repeater": "field_5dd40ca80fb25"
+        }
+      ],
+      "rows_per_page": 20
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page",
+        "operator": "==",
+        "value": "88"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": false,
+  "display_title": "",
+  "allow_ai_access": false,
+  "ai_description": "",
+  "modified": 1784753561
+}

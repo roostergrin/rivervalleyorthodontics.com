@@ -1,0 +1,310 @@
+{
+  "key": "group_f23f59f8ad663",
+  "title": "Community",
+  "fields": [
+    {
+      "key": "field_e91673b4f5e89",
+      "label": "Community",
+      "name": "community",
+      "aria-label": "",
+      "type": "group",
+      "instructions": "Announcements, event information, photos, and videos for the Community page.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "sub_fields": [
+        {
+          "key": "field_c69456f5ae290",
+          "label": "Page Heading",
+          "name": "heading",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "Main heading shown above the community event list.",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "# We Are Local",
+          "placeholder": "# We Are Local",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_30967a4c53e74",
+          "label": "Introduction",
+          "name": "intro",
+          "aria-label": "",
+          "type": "wysiwyg",
+          "instructions": "Optional introductory copy shown above the event list.",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "tabs": "all",
+          "toolbar": "basic",
+          "media_upload": 0,
+          "delay": 0
+        },
+        {
+          "key": "field_5fb4b0deb0381",
+          "label": "Events and Announcements",
+          "name": "events",
+          "aria-label": "",
+          "type": "repeater",
+          "instructions": "Add each community event or announcement as a reusable section.",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "layout": "block",
+          "pagination": 0,
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_f9064be3953e4",
+          "button_label": "Add Community Event",
+          "rows_per_page": 20,
+          "sub_fields": [
+            {
+              "key": "field_f9064be3953e4",
+              "label": "Title",
+              "name": "title",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 1,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": "",
+              "maxlength": "",
+              "parent_repeater": "field_5fb4b0deb0381"
+            },
+            {
+              "key": "field_b1e8028504c9f",
+              "label": "Date and Time",
+              "name": "date",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "Use reader-friendly display text, including the year.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": "",
+              "maxlength": "",
+              "parent_repeater": "field_5fb4b0deb0381"
+            },
+            {
+              "key": "field_5cd1eaef6012d",
+              "label": "Announcement",
+              "name": "announcement",
+              "aria-label": "",
+              "type": "wysiwyg",
+              "instructions": "Short announcement shown beside the featured image.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "tabs": "all",
+              "toolbar": "basic",
+              "media_upload": 0,
+              "delay": 0,
+              "parent_repeater": "field_5fb4b0deb0381"
+            },
+            {
+              "key": "field_e83f4f4f69735",
+              "label": "Details",
+              "name": "details",
+              "aria-label": "",
+              "type": "wysiwyg",
+              "instructions": "Event details shown below the announcement.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "tabs": "all",
+              "toolbar": "basic",
+              "media_upload": 0,
+              "delay": 0,
+              "parent_repeater": "field_5fb4b0deb0381"
+            },
+            {
+              "key": "field_263128e2add46",
+              "label": "Featured Image",
+              "name": "featured_image",
+              "aria-label": "",
+              "type": "image",
+              "instructions": "Landscape event image; prepare to the site treatment before upload.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array",
+              "preview_size": "medium",
+              "library": "all",
+              "min_width": "",
+              "min_height": "",
+              "min_size": "",
+              "max_width": "",
+              "max_height": "",
+              "max_size": "",
+              "mime_types": "jpg,jpeg,png,webp",
+              "parent_repeater": "field_5fb4b0deb0381"
+            },
+            {
+              "key": "field_67381cf32a170",
+              "label": "Photo Gallery",
+              "name": "gallery",
+              "aria-label": "",
+              "type": "gallery",
+              "instructions": "Optional horizontal gallery for this event. Add the newest photo first so it appears on the left.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array",
+              "preview_size": "medium",
+              "library": "all",
+              "min": "",
+              "max": "",
+              "min_width": "",
+              "min_height": "",
+              "min_size": "",
+              "max_width": "",
+              "max_height": "",
+              "max_size": "",
+              "mime_types": "jpg,jpeg,png,webp",
+              "insert": "append",
+              "parent_repeater": "field_5fb4b0deb0381"
+            },
+            {
+              "key": "field_aa3db88d5eb9e",
+              "label": "Videos",
+              "name": "videos",
+              "aria-label": "",
+              "type": "repeater",
+              "instructions": "Optional YouTube, Vimeo, or MP4 links for this event.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "layout": "table",
+              "pagination": 0,
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_3c200cd0cc743",
+              "button_label": "Add Video",
+              "rows_per_page": 20,
+              "parent_repeater": "field_5fb4b0deb0381",
+              "sub_fields": [
+                {
+                  "key": "field_3c200cd0cc743",
+                  "label": "Title",
+                  "name": "title",
+                  "aria-label": "",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "40",
+                    "class": "",
+                    "id": ""
+                  },
+                  "default_value": "",
+                  "placeholder": "",
+                  "prepend": "",
+                  "append": "",
+                  "maxlength": "",
+                  "parent_repeater": "field_aa3db88d5eb9e"
+                },
+                {
+                  "key": "field_f8f3b813cdb88",
+                  "label": "Video URL",
+                  "name": "url",
+                  "aria-label": "",
+                  "type": "url",
+                  "instructions": "",
+                  "required": 1,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "60",
+                    "class": "",
+                    "id": ""
+                  },
+                  "default_value": "",
+                  "placeholder": "https://",
+                  "parent_repeater": "field_aa3db88d5eb9e"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page",
+        "operator": "==",
+        "value": "507"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": 1,
+  "description": "Community announcements, events, photo galleries, and video links.",
+  "show_in_rest": 0,
+  "modified": 1784666868
+}
