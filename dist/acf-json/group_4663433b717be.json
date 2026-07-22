@@ -1,0 +1,80 @@
+{
+  "key": "group_4663433b717be",
+  "title": "Global-Navigation",
+  "fields": [
+    {
+      "key": "field_9d5a5cfa93aba",
+      "label": "Navigation",
+      "name": "navigation",
+      "aria-label": "",
+      "type": "group",
+      "instructions": "Site-wide navigation and scheduling settings.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "sub_fields": [
+        {
+          "key": "field_2d888d09e6b65",
+          "label": "Scheduling Link",
+          "name": "schedule_link",
+          "aria-label": "",
+          "type": "url",
+          "instructions": "Temporary or permanent URL used by the consultation buttons.",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "https://"
+        },
+        {
+          "key": "field_b467443f55bae",
+          "label": "Scheduling Button Text",
+          "name": "schedule_text",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "Click Here to Schedule Your Free Consultation",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post",
+        "operator": "==",
+        "value": "87"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": 1,
+  "description": "Editor-controlled consultation link shared by navigation and page calls to action.",
+  "show_in_rest": 0,
+  "modified": 1784567226
+}
