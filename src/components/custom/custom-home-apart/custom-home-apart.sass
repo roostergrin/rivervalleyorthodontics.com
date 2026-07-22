@@ -31,10 +31,13 @@
 
   &__img
     height: 100%
-    transition: background-size .5s ease
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    transition: filter .3s ease
 
     &:hover
-      background-size: 150% !important
+      filter: brightness(.9)
 
     @include tablet
       height: 30rem
