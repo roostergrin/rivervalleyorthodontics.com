@@ -4,6 +4,6 @@
     .custom-home-apart__text(v-html="props.text")
   .custom-home-apart__tile-container
     .custom-home-apart__tile(v-for="tile in props.tiles")
-      .custom-home-apart__img(:style="{'background': 'url(' + tile.img_src + ') no-repeat center / 110%'}" @click="scrollToSection(tile.route, tile.id)")
+      .custom-home-apart__img(:style="{'background-image': 'url(' + tile.img_src + ')'}" @click="scrollToSection(tile.route, tile.id)")
       .custom-home-apart__label-container
         .custom-home-apart__label {{ tile.label }}
