@@ -38,7 +38,7 @@
       .form-contact__error-message(v-show="errors.has('clientMessage')")  Please fill out your message
     
     .form-contact__group.form-contact__group--button
-      button.form-contact__submit-button(:class="{ 'form-contact__submit-button--success': formSuccess }" @click='validate')
+      button.form-contact__submit-button(type='submit' :class="{ 'form-contact__submit-button--success': formSuccess }")
         .form-contact__submit-overlay(:class="{ 'form-contact__submit-overlay--showing': formSubmitted  && !formSuccess }")
         span.form-contact__submit-label(:class="{ 'form-contact__submit-label--hidden': formSuccess }") Submit
         .form-contact__submit-success(:class="{ 'form-contact__submit-success--showing': formSuccess }")
