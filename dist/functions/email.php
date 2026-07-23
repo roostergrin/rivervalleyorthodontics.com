@@ -18,11 +18,14 @@ function rg_serve_route () {
   $to = 'frontdesk@rvosmiles.com';
   $subject = 'New Contact Form Submission';
   $headers = array('Content-Type: text/html; charset=UTF-8');
+  $client_message = isset($data['message'])
+    ? $data['message']
+    : (isset($data['clientMessage']) ? $data['clientMessage'] : '');
   $message = '<html><body>';
   $message .= '<p><h4><strong>Form Submission by: </strong></h4>' . $data['name'] . '</p>';
   $message .= '<p><h4><strong>New Patient: </strong></h4>' . $data['firstTime'] . '</p>';
   $message .= '<p><h4><strong>Email: </strong></h4>' . $data['email'] . '</p>';
-  $message .= '<p><h4><strong>Message:</strong></h4> ' . $data['message'] . '</p>';
+  $message .= '<p><h4><strong>Message:</strong></h4> ' . nl2br(esc_html($client_message)) . '</p>';
   $message .= '<p><h4><strong>Phone:</strong></h4> ' . $data['phone'] . '</p>';
   $message .= '</body></html>';
 
