@@ -10,26 +10,45 @@ export default {
     }
   },
   mounted () {
-    const videoLoad = setInterval(() => {
-      if (this.$refs.hero !== undefined) {
-        this.$refs.hero.play()
-        clearInterval(videoLoad)
-      }
-    }, 10)
-  },
-  data: () => ({
-    videoState: 'play',
-    video: null
-  }),
-  methods: {
-    toggleVideoState (state) {
-      state ? this.videoState = '' : this.videoState = 'play'
+    this.video = this.$refs.hero
+    this.video.muted = true
+    this.isMuted = true
+
+    const playPromise = this.video.play()
+
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        this.isPlaying = false
+      })
     }
   },
-  watch: {
-    videoState (state) {
-      this.video = this.$refs['hero']
-      state ? this.video.play() : this.video.pause()
+  data: () => ({
+    video: null,
+    isPlaying: true,
+    isMuted: true
+  }),
+  methods: {
+    toggleVideoState () {
+      if (this.video.paused) {
+        const playPromise = this.video.play()
+
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            this.isPlaying = false
+          })
+        }
+      } else {
+        this.video.pause()
+      }
+    },
+    toggleMute () {
+      this.video.muted = !this.video.muted
+    },
+    syncPlaybackState () {
+      this.isPlaying = !this.video.paused
+    },
+    syncMuteState () {
+      this.isMuted = this.video.muted
     }
   }
 }
