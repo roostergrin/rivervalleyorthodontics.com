@@ -11,6 +11,11 @@
     overflow: hidden
     background-color: $white
 
+    @include tablet
+      height: 56.25vw
+      min-height: 220px
+      max-height: 432px
+
     video
       position: absolute
       top: 0
@@ -20,6 +25,9 @@
       overflow: hidden
       height: 100%
       object-fit: cover
+
+      @include tablet
+        object-fit: contain
 
   &__controls
     position: absolute

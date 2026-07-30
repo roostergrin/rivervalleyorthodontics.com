@@ -5,6 +5,7 @@
         iframe.custom-new-braces__video(
           v-if="item.video_type === 'youtube' && getYouTubeId(item.video)",
           :src="getYouTubeEmbedUrl(item.video)",
+          :title="item.title || 'Orthodontic information video'",
           frameborder="0",
           allowfullscreen
         )
@@ -19,6 +20,7 @@
               iframe.custom-new-braces__video(
                 v-if="elastic.video_type === 'youtube' && getYouTubeId(elastic.video)",
                 :src="getYouTubeEmbedUrl(elastic.video)",
+                :title="elastic.title || 'Orthodontic information video'",
                 frameborder="0",
                 allowfullscreen
               )
@@ -30,6 +32,7 @@
             iframe.custom-new-braces__video(
               v-if="item.video_type === 'youtube' && getYouTubeId(item.video)",
               :src="getYouTubeEmbedUrl(item.video)",
+              :title="item.title || 'Orthodontic information video'",
               frameborder="0",
               allowfullscreen
             )
