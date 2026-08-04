@@ -87,6 +87,9 @@
   &__details-copy
     line-height: 1.7
 
+    h3
+      color: $green
+
     p,
     ul
       margin-bottom: 1rem
@@ -161,7 +164,10 @@
 
   &__gallery-controls
     display: flex
+    align-items: center
+    flex-wrap: wrap
     gap: .5rem
+    justify-content: flex-end
 
   &__gallery-control
     display: inline-flex
@@ -183,6 +189,33 @@
     &:focus
       background: $green
       color: $white
+
+  &__gallery-fullscreen
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    min-height: 2.75rem
+    padding: .65rem 1rem
+    border: 2px solid $green
+    border-radius: 999px
+    background: $white
+    color: $green
+    font-family: Raleway
+    font-size: .75rem
+    font-weight: 700
+    letter-spacing: .04em
+    line-height: 1
+    text-transform: uppercase
+    cursor: pointer
+
+    &:hover,
+    &:focus
+      background: $green
+      color: $white
+
+    &:focus-visible
+      outline: 3px solid $blue
+      outline-offset: 3px
 
   &__gallery-grid
     display: flex
@@ -220,6 +253,128 @@
     figcaption
       padding-top: .5rem
       color: $brownGray
+
+  &__gallery-trigger
+    display: block
+    width: 100%
+    padding: 0
+    border: 0
+    background: transparent
+    cursor: zoom-in
+
+    &:focus-visible
+      outline: 3px solid $blue
+      outline-offset: 4px
+
+  &__lightbox
+    position: fixed
+    z-index: 1000
+    inset: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 4.5rem 5.5rem 3.5rem
+    background: rgba(0, 0, 0, .94)
+
+    @include phone-lg
+      padding: 4.25rem 1rem 5rem
+
+  &__lightbox-figure
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    max-width: 100%
+    max-height: 100%
+    margin: 0
+
+    img
+      display: block
+      max-width: 100%
+      max-height: calc(100vh - 10rem)
+      object-fit: contain
+      box-shadow: 0 10px 40px rgba(0, 0, 0, .45)
+
+      @include phone-lg
+        max-height: calc(100vh - 11rem)
+
+    figcaption
+      margin-top: .75rem
+      color: $white
+      text-align: center
+
+  &__lightbox-close,
+  &__lightbox-control
+    display: inline-flex
+    position: absolute
+    align-items: center
+    justify-content: center
+    width: 3rem
+    height: 3rem
+    padding: 0
+    border: 2px solid rgba($white, .8)
+    border-radius: 50%
+    background: rgba(0, 0, 0, .45)
+    color: $white
+    font-family: Arial, sans-serif
+    line-height: 1
+    cursor: pointer
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease
+
+    &:hover,
+    &:focus-visible
+      border-color: $green
+      background: $green
+      color: $white
+      outline: 0
+
+    &:focus-visible
+      box-shadow: 0 0 0 3px rgba($white, .9)
+
+  &__lightbox-close
+    top: 1rem
+    right: 1rem
+    font-size: 2rem
+
+  &__lightbox-control
+    top: 50%
+    font-size: 2.5rem
+    transform: translateY(-50%)
+
+    &--previous
+      left: 1rem
+
+    &--next
+      right: 1rem
+
+    @include phone-lg
+      top: auto
+      bottom: 1rem
+      transform: none
+
+      &--previous
+        left: 1rem
+
+      &--next
+        right: 1rem
+
+  &__lightbox-status
+    display: flex
+    position: absolute
+    bottom: 1rem
+    left: 50%
+    flex-direction: column
+    align-items: center
+    color: $white
+    font-family: Raleway
+    font-size: .85rem
+    line-height: 1.4
+    text-align: center
+    transform: translateX(-50%)
+
+    @include phone-lg
+      bottom: 1.4rem
+      font-size: .75rem
 
   &__video
     h4
