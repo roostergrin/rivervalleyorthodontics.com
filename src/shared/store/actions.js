@@ -1,5 +1,5 @@
 import axios from 'axios'
-import api from 'api'
+import api, { apiFallback } from 'api'
 import {
   GET_APP,
   // GET_BLOG,
@@ -11,11 +11,16 @@ import {
   SET_ANIMATION_STATE
 } from './mutation-types'
 
+const getApi = (route, params) => {
+  return axios.get(`${api}${route}`, { params })
+    .catch(() => axios.get(`${apiFallback}${route}`, { params }))
+}
+
 const actions = {
   GET_APP ({ commit }) {
     (async () => {
       try {
-        const response = await axios.get(`${api}/wp/v2/app`)
+        const response = await getApi('/wp/v2/app')
         const data = response.data.reduce(
           (allData, data) => ({ ...allData, [data.slug]: { ...data.acf } }),
           {}
@@ -49,14 +54,14 @@ const actions = {
   GET_PAGES ({ commit }) {
     (async () => {
       try {
-        const response = await axios.get(`${api}/wp/v2/pages?page=1&per_page=100`)
+        const response = await getApi('/wp/v2/pages', { page: 1, per_page: 100 })
         const total = response.headers['x-wp-totalpages']
         let page = 1
 
         while (page < total) {
           page++
-          let res = axios.get(`${api}/wp/v2/pages?page=${page}&per_page=100`)
-          response.data.concat(res.data)
+          const res = await getApi('/wp/v2/pages', { page, per_page: 100 })
+          response.data = response.data.concat(res.data)
         }
 
         const data = response.data.reduce(

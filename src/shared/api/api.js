@@ -1,5 +1,5 @@
-const api = () => {
-  return 'https://rivervalleyorthodontics.com/wp-json'
-}
+const siteUrl = 'https://rivervalleyorthodontics.com'
 
-export default api()
+export const apiFallback = `${siteUrl}/?rest_route=`
+
+export default `${siteUrl}/wp-json`
