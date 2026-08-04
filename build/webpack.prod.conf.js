@@ -26,7 +26,9 @@ const webpackConfig = merge(baseWebpackConfig, {
   output: {
     path: config.build.assetsRoot,
     filename: utils.assetsPath('js/[name].js'),
-    chunkFilename: utils.assetsPath('js/[id].js')
+    // Code-split routes must use versioned filenames so a returning visitor
+    // cannot combine a newly deployed runtime with a stale cached route chunk.
+    chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
     // filename: utils.assetsPath('js/[name].[chunkhash].js'),
     // chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
